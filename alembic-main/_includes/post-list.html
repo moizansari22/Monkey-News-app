@@ -1,0 +1,89 @@
+{% if paginator.posts %}
+  <section class="section  typeset">
+    <ul class="list  list--posts">
+      {% assign random_posts = paginator.posts | sample %}
+      {% for page in paginator.posts %}
+        <li class="item  item--post">
+          <article class="">
+
+            <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+            {% include post-meta.html %}
+
+            brand name{{page.brand}} 
+            
+            {% assign mydata = site.data.mydata %}
+            {% for item in mydata %}
+              {% if item.brand == page.brand %}
+                <p>The page title is {{ page.title }} and matches an item in mydata called {{ item.brand }}.</p>
+                <p>{{item.url | append: page.productlink}}</p>random_posts
+                <a href="{{item.url | append: page.productlink}}" target="_blank">link to product 2</a>
+              {% endif %}
+            {% endfor %}
+      
+            
+              <!-- <a href="{{ url }}">{{ item.title }} something here</a> -->
+            
+          
+
+            
+
+            <!-- {% assign foundImage = 0 %}
+            {% assign images = page.content | split:"<img " %}
+            {% for image in images %}
+              {% if image contains 'src' %}
+          
+                  {% if foundImage == 0 %}
+                      {% assign html = image | split:"/>" | first %}
+                      <img {{ html }} />
+                      {% assign foundImage = 1 %}
+                  {% endif %}
+              {% endif %}
+            {% endfor %} -->
+
+            <p class="article__category">{{page.categories}}</p>
+    <h4>{{ post.title }}</h4>
+    <p class="article__description">{{page.description}}</p>
+
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+    {% include post-pagination.html %}
+  </section>
+{% else %}
+  <section class="section  typeset">
+    <ul class="list  list--posts">
+      {% for page in site.posts %}
+      <li class="item  item--post">
+        <article class="">
+
+          <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+          {% include post-meta.html %}
+
+          <p>{{page.cover}}</p>
+
+          
+
+          {% assign foundImage = 0 %}
+          {% assign images = page.content | split:"<img " %}
+          {% for image in images %}
+            {% if image contains 'src' %}
+        
+                {% if foundImage == 0 %}
+                    {% assign html = image | split:"/>" | first %}
+                    <img {{ html }} />
+                    {% assign foundImage = 1 %}
+                {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          <p class="article__category">{{page.categories}}</p>
+  <h4>{{ post.title }}</h4>
+  <p class="article__description">{{page.description}}</p>
+
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
