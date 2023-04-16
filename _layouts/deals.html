@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include site-header.html %}
+
 
 <main class="main  container">
 
@@ -23,14 +23,14 @@ layout: default
         {% endfor %}
         
         {% assign foundImage = 0 %}
-        {% assign images = page.content | split:"<img " %}
+        {% assign images = page.content | split:" <img " %}
         {% for image in images %}
           {% if image contains 'src' %}
       
               {% if foundImage == 0 %}
                   {% assign html = image | split:"/>" | first %}
                   <img {{ html }} />
-                  <meta itemprop="image" content="{{page.}}">
+                  
                   {% assign foundImage = 1 %}
               {% endif %}
           {% endif %}
