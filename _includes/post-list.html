@@ -26,24 +26,27 @@
           >Open in new tab and change current tab</button
         >
 
-        <p id="postUrl" hidden>{{post.url}}</p>
-        <p id="producttUrl" hidden>{{{item.url | append: page.productlink}}}}</p>
+        post
+        <p id="postUrl" >{{page.url}}</p>
+
+        product
+        <p id="producttUrl" >{{item.url | append: page.productlink}}"</p>
 
         <script type="text/javascript">
 
-          var postUrl = document.getElementById("postUrl");
-          var producttUrl = document.getElementById("producttUrl");
+          var postUrl = document.getElementById("postUrl").innerText;
+          var producttUrl = document.getElementById("producttUrl").innerText;
         
           function open_win() {
             
             event.preventDefault();
 
-            window.open(postUrl, "_blank");
+            window.open(producttUrl, "_blank");
             
             
             setTimeout(function () {
               
-              window.location.href = producttUrl
+              window.location.href = postUrl
               
             }, 500);
           }
