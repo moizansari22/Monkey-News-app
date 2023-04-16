@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/general/external%20sources/example-post-one.html</loc>
-<lastmod>2016-08-27T00:00:00+01:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/alembic-main/general/external%20sources/example-post-one.html</loc>
 <lastmod>2016-08-27T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/history/external%20sources/example-post-two.html</loc>
-<lastmod>2016-08-28T00:00:00+01:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/alembic-main/history/external%20sources/example-post-two.html</loc>
 <lastmod>2016-08-28T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/general/example-post-three.html</loc>
-<lastmod>2016-08-29T00:00:00+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/alembic-main/general/example-post-three.html</loc>
@@ -120,11 +108,5 @@
 </url>
 <url>
 <loc>http://localhost:4000/deals/page8/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/deals/page9/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/deals/page10/</loc>
 </url>
 </urlset>

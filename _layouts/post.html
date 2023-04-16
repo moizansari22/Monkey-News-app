@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post-header
 ---
 
 
@@ -9,7 +9,20 @@ layout: default
 
     <h1>{{ page.title }}</h1>
     {% include post-meta.html %}
-    {{ content }}
+    <!-- {{ content }} -->
+
+       {% assign foundImage = 0 %}
+            {% assign images = page.content | split:"<img " %}
+            {% for image in images %}
+              {% if image contains 'src' %}
+          
+                  {% if foundImage == 0 %}
+                      {% assign html = image | split:"/>" | first %}
+                      <img {{ html }} />
+                      {% assign foundImage = 1 %}
+                  {% endif %}
+              {% endif %}
+            {% endfor %}
 
     {% include nav-share.html %}
 

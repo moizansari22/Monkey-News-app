@@ -21,10 +21,20 @@ layout: default
             <a href="{{item.url | append: page.productlink}}" target="_blank">link to product 2</a>
           {% endif %}
         {% endfor %}
-
-
-        <!-- {{ content }} -->
         
+        {% assign foundImage = 0 %}
+        {% assign images = page.content | split:"<img " %}
+        {% for image in images %}
+          {% if image contains 'src' %}
+      
+              {% if foundImage == 0 %}
+                  {% assign html = image | split:"/>" | first %}
+                  <img {{ html }} />
+                  <meta itemprop="image" content="{{page.}}">
+                  {% assign foundImage = 1 %}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
       
 
     </article>
