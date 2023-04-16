@@ -148,7 +148,6 @@ DEPENDENCIES
   alembic-jekyll-theme!
   jekyll-dotenv
   jekyll-notion
-  jekyll-sass-converter
 
 BUNDLED WITH
    2.3.24

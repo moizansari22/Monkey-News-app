@@ -65,7 +65,8 @@
 
   <body class="">
     
-    {% include site-header.html %}
+    {{include site.header}}
+
     {{ content }}
 
     {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}
