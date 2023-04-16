@@ -1,9 +1,0 @@
-<nav class="nav  nav--social">
-  {% for link in site.social_links %}
-    {% if link[1] != blank %}
-      {% assign id = link[0] | downcase %}
-      <a href="{{ link[1] }}">
-      </a>
-    {% endif %}
-  {% endfor %}
-</nav>
