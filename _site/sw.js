@@ -1,8 +1,8 @@
-const version = '20230416114423';
+const version = '20230416120916';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/clothing/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html","/clothing/frayed-hem-denim-shorts-teenage-girl-mango-teen-malaysia.html","/categories.html","/deals/","/","/manifest.json","/offline.html","/assets/search.json","/search.html","/redirects.json","/sitemap.xml","/robots.txt","/feed.xml","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/clothing/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html","/clothing/frayed-hem-denim-shorts-teenage-girl-mango-teen-malaysia.html","/categories.html","/deals/","/","/manifest.json","/offline.html","/assets/search.json","/search.html","/css/style.css","/assets/styles.css","/redirects.json","/sitemap.xml","/robots.txt","/feed.xml","/css/style.css.map","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 

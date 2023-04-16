@@ -1,0 +1,95 @@
+/************************
+WRAPPER CONTAINER
+************************/
+
+.wrapper {
+  padding: 0 8px;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+}
+
+.section {
+  text-align: center;
+  &__intro {
+    margin: 2.5rem auto 2.25rem auto;
+    text-align: center;
+    max-width: 40rem;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 800px) {
+
+  .wrapper{
+    margin-left: 260px;
+  }
+  .content-area {
+    padding-left: 0px;
+    padding-right: 10px;
+    margin: auto;
+  }
+
+  .grid-layout {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .works div {
+    padding: 0.625rem 1rem;
+    border-right: 1px solid #e7e8e9;
+  }
+
+  .reasons {
+    padding: 1em 4rem;
+  }
+
+  .section {
+    margin: 12vh 0;
+    text-align: center;
+
+    &__intro {
+      margin: 2.5rem auto 2.25rem auto;
+      text-align: center;
+      max-width: 40rem;
+    }
+  }
+}
+
+.social-header {
+  display: flex;
+  align-items: center;
+}
+
+.social {
+  width: 34px;
+  height: 34px;
+  padding: 0px;
+  margin: 0px 3.5px;
+  border: 1px solid transparent;
+  border-radius: 34px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 34px;
+}
+
+.facebook {
+  background-color: rgb(24, 119, 242);
+}
+
+.youtube {
+  background-color: rgb(255, 0, 0);
+}
+
+.pintrest {
+  background-color: rgb(255, 0, 0);
+}
+
+.instargram {
+  background-color: rgb(195, 42, 163);
+}
+
