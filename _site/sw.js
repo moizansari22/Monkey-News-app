@@ -1,8 +1,8 @@
-const version = '20230415144801';
+const version = '20230416061124';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/clothing/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html","/clothing/poney.html","/clothing/lovebonito.html","/clothing/drmister.html","/clothing/test-clothing.html","/clothing/zip-knit-sweater-teenage-girl-mango-teen-malaysia.html","/clothing/zip-knit-sweater-teenage-girl-mango-teen-malaysia.html","/clothing/zip-knit-sweater-teenage-girl-mango-teen-malaysia.html","/clothing/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html","/clothing/oversized-message-t-shirt-teenage-girl-mango-teen-malaysia.html","/categories.html","/deals/","/","/manifest.json","/offline.html","/assets/search.json","/search.html","/redirects.json","/sitemap.xml","/robots.txt","/deals/page2/","/deals/page3/","/deals/page4/","/deals/page5/","/deals/page6/","/deals/page7/","/feed.xml","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/kids/color-block-family-matching-crewneck-long-sleeve-sweatshirts-only-rm-72-patpat-asia.html","/clothing/calia-woven-knit-frill-sleeve-top.html","/clothing/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html","/clothing/poney.html","/clothing/lovebonito.html","/clothing/drmister.html","/clothing/test-clothing.html","/clothing/zip-knit-sweater-teenage-girl-mango-teen-malaysia.html","/clothing/zip-knit-sweater-teenage-girl-mango-teen-malaysia.html","/clothing/zip-knit-sweater-teenage-girl-mango-teen-malaysia.html","/categories.html","/alembic-main/categories.html","/deals/","/alembic-main/deals/","/alembic-main/","/","/manifest.json","/manifest.json","/offline.html","/alembic-main/offline.html","/assets/search.json","/alembic-main/assets/search.json","/alembic-main/search.html","/search.html","/redirects.json","/sitemap.xml","/robots.txt","/deals/page2/","/deals/page3/","/deals/page4/","/deals/page5/","/deals/page6/","/deals/page7/","/deals/page8/","/deals/page9/","/deals/page10/","/feed.xml","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 
