@@ -1,0 +1,240 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+/****************
+MAINMENU
+******************/
+
+.header{
+  border:1px solid #3f3f3f1c;
+  color:red;
+}
+
+.nav {
+  transition: -webkit-transform 1s cubic-bezier(0.48, 0, 0.12, 1);
+  transition: transform 1s cubic-bezier(0.48, 0, 0.12, 1);
+  transition: transform 1s cubic-bezier(0.48, 0, 0.12, 1),
+    -webkit-transform 1s cubic-bezier(0.48, 0, 0.12, 1);
+
+  justify-content: space-between;
+  display: flex;
+  font-weight: 500;
+  align-items: flex-start;
+
+  .logo {
+    flex: 1;
+    opacity: 1;
+    height: auto;
+    padding: 5px 0px;
+    object-fit: contain;
+    align-self: center;
+    max-width: 90px;
+    object-fit: contain;
+    left: 0;
+  }
+
+  .menus {
+    align-self: center;
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    padding: 4em;
+    flex:1;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: -9;
+
+    a {
+     
+      margin-top: 1em;
+      font-weight: 200;
+      display: flex;
+      align-items: center;
+    }
+
+    a.btn {
+     
+      padding: 6px 16px;
+    }
+
+    &--end{
+      display:flex;
+
+      .search{
+        width: 330px;
+        margin-right:16px;
+      }
+    }
+  }
+
+  .menus.active {
+    opacity: 1;
+    z-index: 9;
+    display: flex;
+  }
+}
+
+.menu-icon {
+  width: 30px;
+  height: 35px;
+  z-index: 9999;
+  margin-top: 2em;
+
+  span {
+    display: block;
+    margin: 0 auto;
+    width: 18px;
+    height: 2px;
+    background-color: #111111;
+    transform-origin: 50% 50%;
+    transition: all 0.5s ease;
+
+    &:first-child {
+      margin-bottom: 7px;
+    }
+
+    &:last-child {
+      margin-top: 7px;
+    }
+  }
+}
+
+.menu-icon.active {
+  span {
+    &:first-child {
+      margin-bottom: -2px;
+      transform: rotate(45deg);
+    }
+    &:last-child {
+      margin-top: -2px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media screen and (min-width: 930px) {
+  .nav {
+    
+
+    .logo {
+      opacity: 1;
+      height: auto;
+      padding: 15px 0px;
+      max-width: 120px;
+    }
+
+    .menus {
+      position: relative;
+      z-index: 9;
+      flex-direction: row;
+      height: auto;
+      opacity: 1;
+      padding: 0;
+      background-color: transparent;
+      display: flex;
+
+      a {
+       
+        margin: 0 1rem 0 0;
+        padding: 0.25rem;
+        margin-top: 0;
+      }
+
+      a.logo{
+        margin: 0;
+        width: 100%;
+        max-width: 120px;
+    margin-right: 2em;
+      }
+    }
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
+
+.toggle-menu {
+  padding: 0.1em 0.2em 0.2em;
+  position: absolute;
+  top: 0.12em;
+  right: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mobile-menu {
+  padding-left: 2em;
+  background-color: rgba(0, 0, 0, 0.51);
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  display: none;
+  width: 100vw;
+}
+
+.show-menu {
+  right: 0;
+}
+
+@media screen and (min-width: 900px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    
+  }
+  .nav {
+    position: relative;
+    height: auto;
+    display: flex;
+    left: 0;
+    width: auto;
+    align-items: center;
+  }
+  .nav__items {
+    position: static;
+    height: auto;
+    display: flex;
+    flex: 1;
+    overflow: visible;
+  }
+  .nav__item {
+    padding: 0 1.5em 0 1.5em;
+
+    font-weight: bold;
+
+    border-bottom: 0;
+    a {
+      display: block;
+      line-height: 62px;
+    }
+  }
+
+  .nav__item--btn {
+    a {
+      color: #fff;
+    }
+  }
+
+  .nav--right {
+    justify-content: flex-end;
+  }
+  .nav__item--small {
+    font-size: 0.9em;
+  }
+  .toggle-menu {
+    display: none;
+  }
+  #logo {
+    align-self: flex-start;
+    margin-left: 0;
+
+  }
+}

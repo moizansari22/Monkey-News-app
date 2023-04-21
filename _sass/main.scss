@@ -1,16 +1,49 @@
-@charset "utf-8";
+@charset 'UTF-8';
 
+// 1. Configuration and helpers
 @import
-"partials/normalize",
-"partials/product",
-"partials/header",
-"partials/aside",
-"partials/fonts",
-"partials/variables",
-"partials/mixins",
-"partials/utilities",
-"partials/typography",
-"partials/footer",
-"partials/grid",
-"partials/icons"
-;
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'themes/default';
+
+// 2. Vendors
+@import
+  'vendor/normalize';
+
+// 3. Base stuff
+@import
+'base/helpers',
+  'base/base',
+  'base/fonts',
+  'base/typography';
+  
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/grid',
+  'layout/breadcrumbs',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/button',
+  'components/file-upload',
+  'components/input-files',
+  'components/modal',
+  'components/radio-checkbox',
+  'components/table',
+  'components/tabs',
+  'components/toaster',
+  'components/cards',
+  'components/loader',
+  'components/accordion';
+ 
+
+
+// 6. Page-specific styles
+@import
+'pages/home.scss';
+
+

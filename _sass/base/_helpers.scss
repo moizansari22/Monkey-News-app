@@ -1,0 +1,168 @@
+$border-color: #606469; 
+$main-background:  #fff;
+
+$primary:  #642eff;;
+$primary-hover: #3901d7;
+$primary-focused: #3901d7;
+
+$secondary:  #035257;
+$secondary-hover: #ba112d;
+$secondary-focused: #ba112d;
+
+$marker: rgb(3, 82, 87);
+$marker-hover: #ba112d;
+$marker-focused: #ba112d;
+
+
+$text-color: #595a5d;
+
+$marker-invented:  #fff;
+$marker-invented-hover: #ba112d;
+$marker-invented-focused: #ba112d;
+
+$tetiary: rgb(246, 251, 250); 
+$tetiary-hover: #ba112d;
+$tetiary-focused: #ba112d;
+
+$accent: #f7f8fd;;
+
+
+
+
+$success: #5b0;
+$danger: #ff725d;
+
+
+$shadow: -16px -16px #f3ebd6;
+
+$small:14px;
+$medium:16px;
+$h1: 32px;
+$h2:26px;
+$h3: 20px;
+
+
+
+$font-tiny:	12px;
+$font-small:	14px;	
+$font-normal:	16px;
+$font-large:	20px;
+$font-massive:	24px;	
+$display-2:	88px;	
+$display-1:	96px;	
+$display-3:	72px;	
+$display-4:	56px;	
+$header-1:	40px;	
+$header-2:	32px;	
+$header-3:	28px;	
+$header-4:	24px;	
+$header-5:	20px;	
+$header-6:	16px;
+
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+
+img {
+  width: 100%;
+  //background-color: #f0f7fc;
+  object-fit: cover;
+ // max-height: 350px;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 20px; /* 3 */
+  padding-right: 20px; /* 3 */
+  width: 100%; /* 1 */
+ }
+
+//  .wrapper{
+//   max-width: $max-width; /* 1 */
+//  }
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.display-none{
+  display: none !important;
+}
+
+.display{
+  display: block !important;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.accent{
+  background:$accent;
+}
+
+.tetiary{
+  background: $tetiary;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+
+
+
+

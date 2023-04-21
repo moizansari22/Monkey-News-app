@@ -1,6 +1,9 @@
+<div class="article-grid">
+  <ul class="products">
 {% if paginator.posts %}
-<section class="section typeset">
-  <ul class="list list--posts">
+
+
+    
     {% assign random_posts = paginator.posts | sample %} 
     {% for page in paginator.posts %}
 
@@ -9,25 +12,43 @@
     {% assign current_date = 'now' %}
     {% assign age = current_date | date: "%s" | minus: post_date | date: "%j" | minus: 1 %}
 
+    {% assign priceBefore = page.before | times: 1.0  %}
+    {% assign priceAfter = page.after | times: 1.0 %}
+    {% assign priceDifference = priceBefore | minus: priceAfter   %}
+    {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
+    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
+
 {%if age <= 120 %}
-    <li class="item item--post">
-      <article class="">
-        <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-        {% include post-meta.html %} 
-        
-        {{page.brand}} {% assign mydata =
-        site.data.mydata %} 
-        {% for item in mydata %} {% if item.brand == page.brand %}
-       
-        <a href="{{item.url | append: page.productlink}}" target="_blank">link to product</a>
 
-        {% assign mylink = item.url | append: page.productlink %}
-
-        {% endif %} 
-        {% endfor %}
+<li class="product" itemprop="item" itemtype="http://schema.org/Product">
+      
+  <meta itemprop="url" content="{{page.url}}">
+  <meta itemprop="name" content="{{page.title}}" />
+  <meta itemprop="priceCurrency" content="RM" />
+  <meta itemprop="price" content="{{page.after}}" />
+  <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope>
+    <meta itemprop="name" content="{{page.brand}}" />
+  </div>
+  <!-- <link itemprop="image" href="{{post.cover }}" /> -->
 
 
-        <!-- {% assign foundImage = 0 %}
+  {% assign mydata = site.data.mydata %} 
+  {% for item in mydata %} {% if item.brand == page.brand %}
+   
+    
+
+    {% assign mylink = item.url | append: page.productlink %}
+
+    {% endif %} 
+    {% endfor %}
+
+
+
+<div class="product__img">
+
+  
+  
+     {% assign foundImage = 0 %}
             {% assign images = page.content | split:"<img " %}
             {% for image in images %}
               {% if image contains 'src' %}
@@ -38,44 +59,48 @@
                       {% assign foundImage = 1 %}
                   {% endif %}
               {% endif %}
-            {% endfor %} -->
+            {% endfor %}
 
-        <p class="article__category">{{page.categories}}</p>
-        <h4>{{ post.title }}</h4>
-        <p class="article__description">{{page.description}}</p>
-      </article>
-    </li>
-    {% endif %}
+  <div class="gotoproduct">
+    <a href="{{item.url | append: page.productlink}}" target="_blank">go to product</a>
+  </div>
+  
+  </div>
+   
 
-    {% endfor %}
-  </ul>
-  {% include post-pagination.html %}
-</section>
-{% else %}
-<section class="section typeset">
-  <ul class="list list--posts">
-    {% for page in site.posts %}
-    <li class="item item--post">
-      <article class="">
-        <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-        {% include post-meta.html %}
+<div class="product__details"> 
+    <p class="product__category">{{ page.brand }}</p>
+    <p class="product__title">{{ page.title }}</p>
+    <div class="offset">
+      <span itemprop="priceCurrency" content="RM">RM</span>
+      <span itemprop="price" content="">{{ page.before }}</span>
+    </div>
+    <div class="price">
+       <div class="whole"> <span class="price-before">RM{{ page.before }}</span> RM{{ page.after }}  </div>
+    </div>
 
-        <p>{{page.cover}}</p>
 
-        {% assign foundImage = 0 %} {% assign images = page.content |
-        split:"<img " %} {% for image in images %} {% if image contains 'src' %}
-        {% if foundImage == 0 %} {% assign html = image | split:"/>" | first %}
-        <img {{ html }} />
-        {% assign foundImage = 1 %} {% endif %} {% endif %} {% endfor %}
 
-        <p class="article__category">{{page.categories}}</p>
-        <h4>{{ post.title }}</h4>
-        <p class="article__description">{{page.description}}</p>
-      </article>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
+    <div class="coupon-highlight">  
+     {{discountPercentage | times: 100 | round }}%
+    </div>
 
+
+  </div>
+
+</li>
 
 {% endif %}
+
+{% endfor %}
+{% endif %}
+
+</ul>
+</div>
+
+
+
+
+
+
+  {% include post-pagination.html %}

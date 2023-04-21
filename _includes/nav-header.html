@@ -1,22 +1,44 @@
-{% if site.navigation_header %}
-<nav class="nav  nav--header">
-  <ul class="list  list--nav">
-    {% for item in site.navigation_header %}
+<div class="nav-container">
+    <div class="top"></div>
+    <div class="brand-icon"></div>
 
-      {% if item.url contains '://' %}
-        {% assign url = item.url %}
-      {% else %}
-        {% assign url = item.url | relative_url %}
-      {% endif %}
+    
+      <nav class="nav">
+        <ul class="menus">
 
-      <li class="item  item--nav{% if item.url == page.url %}  item--current{% endif %}">
-        <a href="{{ url }}">{{ item.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
- 
-</nav>
-{% else %}
-  {% include nav-default.html %}
-{% endif %}
+          <li class="{% if item.url == page.url %}  item--current{% endif %}">
+            <a href="/">Wizidelas</a>
+          </li>
+
+          {% for item in site.navigation_header %}
+
+          {% if item.url contains '://' %}
+            {% assign url = item.url %}
+          {% else %}
+            {% assign url = item.url | relative_url %}
+          {% endif %}
+    
+          <li class="{% if item.url == page.url %}  item--current{% endif %}">
+            <a href="{{ url }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+
+        <div class="menus--end">
+          <a class="input search" href="search.html">Search</a>
+          <a class="btn btn--large default" href="about-us.html"
+            >Register</a
+          >
+        </div>
+
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+</div>
+
+
+
+
 

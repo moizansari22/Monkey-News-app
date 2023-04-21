@@ -5,7 +5,44 @@
 
 @import "main";
 
-.content {
-  width: 45rem;
-  margin: 0 auto;
+.container{
+  padding: 20px 30px;
+  max-width: 1600px;
+  margin:auto;
+}
+
+ul{
+  
+color: red;
+  li{
+    list-style: none;
+  }
+}
+
+.nav--paginator{
+  padding: 0 0.3rem;
+  text-align: center;
+  justify-content: start;
+}
+
+.pagination{
+  &--previous, &--next, &--counter{
+    margin-right: calc(10px/2);
+    border: 1px solid #D4D4E0;
+    padding: 6px 24px;
+    border-radius: 2px;
+    color: #3A3A5F;
+    display: inline-block;
+  }
+
+ 
+}
+
+.lead-header{
+  border-style: solid;
+    border-width: 0 0 1px;
+    border-color: #3f3f3f1c;
+    margin-top: 0;
+    margin-bottom: 54px;
+    padding: 24px 0px 14px 0;
 }

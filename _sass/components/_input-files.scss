@@ -1,0 +1,145 @@
+/****************
+INPUT  FORMS
+******************/
+
+.has-divider {
+    padding: 18px;
+    border-bottom: 1px solid $border-color;
+    margin: 0 !important;
+}
+
+.form-wrap{
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    /*min-height: 58px;*/
+    position: relative;
+    margin-bottom: 1em;
+    border-image: initial;
+    transition: height 0.3s;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+    .has-divider {
+        padding: 48px 48px 30px 48px;
+    }
+    
+    /****************
+HORIZONTAL FORMS
+******************/
+    .form-horizontal {
+        position: relative;
+        .form-input
+         {
+            flex: 2;
+            display: block;
+        }
+  
+    }
+}
+
+/****************
+VERTICAL FORMS
+******************/
+
+.form-vertical{
+    padding: 3em;
+    label{
+        display: block;
+        margin-bottom: 2px;
+     
+    }
+}
+
+.placeholder {
+    left: 20px;
+    letter-spacing: 1px;
+    pointer-events: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+    font-size: 10px;
+    margin-top: 6px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.error-msg {
+   
+    color: $danger;
+    margin-top: -10px;
+    font-size: 12px;
+ 
+}
+
+.input {
+    display: inline-block;
+    width: 100%;
+    // max-width: 500px;
+    height: 44px;
+    padding: 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #33475b;
+    border: 1px solid #cbd6e2;
+    background-color: #f5f8fa;
+}
+
+.select{
+      position: relative;
+    margin-bottom: 1em;
+    width: 100%;
+    
+    &:after{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: $danger;
+    }
+}
+
+input:disabled {
+    opacity: 0.6;
+}
+
+input:required {
+    position: relative;
+}
+
+input:required::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: $danger;
+    z-index: 999999;
+}
+
+.textarea {
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    background: 0px 0px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    outline: 0px !important;
+    min-height: 90px;
+    resize: none;
+    padding: 1.5em 1em 0.5em 1.2em;
+    font-size: 1.1em;
+    border: 1px solid $border-color;
+}

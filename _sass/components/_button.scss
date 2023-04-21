@@ -1,0 +1,124 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn{
+   
+    transition: .3s;
+    font-size: 16px;
+    line-height: 2em;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: -.01em;
+    white-space: nowrap;
+    align-items: center;
+    border-radius: 32px;
+    justify-content: center;
+    padding: 8px 24px;
+    -webkit-box-pack: center;
+    border: 0;
+    
+
+     i{
+        vertical-align: middle;
+        margin-top: -0.12em;
+        padding:0 0.4em;
+    }
+    
+    &--large{
+   
+        line-height: 1.2em;
+        font-size: 16px;
+        background-color: #c9c9c9;
+        border-radius: 2px 2px 2px 2px;
+        padding: 12px 20px;
+        -webkit-box-pack: center;
+        
+    
+    }
+}
+
+
+.btn-wrapper{
+    display: flex;
+    margin-top: 32px;
+    align-items: center;
+
+    .spacer{
+        width: 1px;
+        height: 1px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+
+.btn-round{
+    border-radius: 150px;
+}
+
+
+
+.btn-text {
+    background-color: transparent;
+    color: $primary;
+}
+
+
+
+.primary {
+    background-color: $primary;
+    color: #fff !important;
+    &:hover {
+        background-color: $primary-hover;
+        cursor: pointer;
+    }
+}
+
+.primary-text{
+    // color: $primary;
+}
+
+.default {
+    color: #fff;
+    background-color: #160042;
+}
+
+.danger {
+    background-color: $danger;
+    border: 2px solid $danger;
+    color: #fff;
+  
+}
+
+.success {
+    background-color: $success;
+    color: #fff;
+    
+    i{
+        color: #fff;
+    }
+}
+
+.outline {
+    background-color: transparent;
+    border: 1px solid $border-color;
+   
+}
+
+
+
+
+
+.light{
+    background-color: #f7f8fd;
+    color: #642eff;
+    
+}
+
+.btn.full{
+    width: 100%;
+}

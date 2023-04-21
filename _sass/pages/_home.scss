@@ -1,0 +1,144 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.banner {
+  position: relative;
+  padding-top: 3em;
+  padding-bottom: 6em;
+
+  .banner-content {
+    h1 {
+      max-width: 1200px;
+      font-size: clamp(32px, 3.33333vw, 48px);
+      line-height: 120%;
+    }
+  }
+}
+
+.banner-bottom {
+  .img {
+    width: 100%;
+    margin-bottom: 2em;
+    background-color: #fee4c1;
+    height: 495px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .banner-bottom {
+    display: flex;
+
+    img {
+      flex: 1;
+    }
+
+    &__content {
+      max-width: 40%;
+      padding-left: 8em;
+      align-self: center;
+    }
+  }
+
+  .pull-below {
+    margin-bottom: -0.1em;
+  }
+
+  .pull-up {
+    margin-top: -1em;
+  }
+}
+
+.process {
+  background-color: #efefef;
+  padding: 1.275em;
+  padding-bottom: 145px;
+  height: 545px;
+
+  .processTitle {
+    margin-bottom: 1.25em;
+    font-size: clamp(18px, 3.33333vw, 20px);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1em;
+  }
+
+  ul li {
+    font-size: 15px;
+  }
+}
+
+.about p {
+  max-width: 720px;
+}
+
+/************************
+BACKGROUND IMAGESECTION FORM
+************************/
+
+// .flex-row {
+//   justify-content: space-between;
+// }
+
+.section-form {
+  flex: 1;
+  max-width: 400px;
+}
+
+.cta-form {
+  display: flex;
+  width: 100%;
+  max-width: 440px;
+  margin: 24px auto;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #f7f8fd;
+  padding: 8px;
+
+  .input {
+    min-height: 48px;
+    margin-bottom: 0;
+    padding-left: 14px;
+    border: 1px #000;
+    background-color: transparent;
+    color: #160042;
+
+    &:focus {
+      outline: 0;
+      border: 0;
+    }
+  }
+}
+
+/************************
+TEST HEADER
+************************/
+
+.previews {
+  img {
+    max-width: 288px;
+    max-height: 500px;
+    overflow: hidden;
+    border: 1px dotted #160042;
+  }
+
+  ul {
+    margin-bottom: 1em;
+    font-size: 15px;
+    li {
+      margin: 0;
+    }
+    li.label {
+      width: 200px;
+    }
+  }
+}
+
+.test-header {
+  // background-color: #f7f8fd;
+
+  border-bottom: 1px solid #efefef;
+
+  margin: 1em 0;
+  padding: 16px 24px;
+  padding-bottom: 2em;
+}
