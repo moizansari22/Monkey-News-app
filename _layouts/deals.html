@@ -8,36 +8,7 @@ layout: default
 
   <div class="content">
 
-    <article class="article  article--page  typeset">
 
- 
-        <h1>{{ page.title }}</h1>
-
-        {% assign mydata = site.data.mydata %}
-        {% for item in mydata %}
-          {% if item.brand == page.brand %}
-            <p>The page title is {{ page.title }} and matches an item in mydata called {{ item.brand }}.</p>
-            <p>{{item.url | append: page.productlink}}</p>random_posts
-            <a href="{{item.url | append: page.productlink}}" target="_blank">link to product 2</a>
-          {% endif %}
-        {% endfor %}
-        
-        {% assign foundImage = 0 %}
-        {% assign images = page.content | split:" <img " %}
-        {% for image in images %}
-          {% if image contains 'src' %}
-      
-              {% if foundImage == 0 %}
-                  {% assign html = image | split:"/>" | first %}
-                  <img {{ html }} />
-                  
-                  {% assign foundImage = 1 %}
-              {% endif %}
-          {% endif %}
-        {% endfor %}
-      
-
-    </article>
 
     {% include post-list.html %}
 

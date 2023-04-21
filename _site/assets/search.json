@@ -26,21 +26,21 @@
     "title": "Categories",
     "excerpt": "Category index\n",
     "content": "\n",
-    "url": "/categories.html"
+    "url": "/categories/"
   },
   
   {
     "title": "APage title",
     "excerpt": "something about wizie\n",
     "content": "\n",
-    "url": "/"
+    "url": "/index.html"
   },
   
   {
     "title": "Search",
     "excerpt": "Search for a page or post you’re looking for\n",
     "content": "{% include site-search.html %}\n",
-    "url": "/search.html"
+    "url": "/search/"
   }
   
 ]
