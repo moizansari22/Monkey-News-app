@@ -1,8 +1,8 @@
-const version = '20230421134825';
+const version = '20230422120030';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/clothing/sephora/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html","/clothing/zalora/frayed-hem-denim-shorts-teenage-girl-mango-teen-malaysia.html","/categories/","/deals/","/index.html","/manifest.json","/offline.html","/assets/search.json","/search/","/css/style.css","/assets/styles.css","/redirects.json","/sitemap.xml","/robots.txt","/feed.xml","/css/style.css.map","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/clothing/sephora/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html","/clothing/zalora/frayed-hem-denim-shorts-teenage-girl-mango-teen-malaysia.html","/categories/","/about/","/privacy/","/deals/","/index.html","/manifest.json","/offline.html","/assets/search.json","/search/","/css/style.css","/assets/styles.css","/redirects.json","/sitemap.xml","/robots.txt","/feed.xml","/css/style.css.map","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 

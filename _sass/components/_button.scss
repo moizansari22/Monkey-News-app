@@ -9,7 +9,8 @@
    
     transition: .3s;
     font-size: 16px;
-    line-height: 2em;
+    line-height: 1.1em;
+    max-height: 44px;
     font-weight: 500;
     text-align: center;
     letter-spacing: -.01em;
@@ -30,8 +31,9 @@
     
     &--large{
    
-        line-height: 1.2em;
+        
         font-size: 16px;
+        
         background-color: #c9c9c9;
         border-radius: 2px 2px 2px 2px;
         padding: 12px 20px;
@@ -57,7 +59,7 @@
 
 
 .btn-round{
-    border-radius: 150px;
+    border-radius: 1.5em;
 }
 
 

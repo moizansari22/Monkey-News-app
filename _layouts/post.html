@@ -1,17 +1,17 @@
 ---
-layout: post-header
+layout: default
 ---
 
 
-<main class="">
+<main class="container">
 
-  <article class="">
+  <article class="details">
 
     <h1>{{ page.title }}</h1>
     {% include post-meta.html %}
     <!-- {{ content }} -->
 
-       {% assign foundImage = 0 %}
+       <!-- {% assign foundImage = 0 %}
             {% assign images = page.content | split:"<img " %}
             {% for image in images %}
               {% if image contains 'src' %}
@@ -22,7 +22,7 @@ layout: post-header
                       {% assign foundImage = 1 %}
                   {% endif %}
               {% endif %}
-            {% endfor %}
+            {% endfor %} -->
 
     {% include nav-share.html %}
 
@@ -33,4 +33,4 @@ layout: post-header
 
 </main>
 
-{% include site-footer.html %}
+

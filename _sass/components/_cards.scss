@@ -5,8 +5,10 @@ PRODUCR STYLES
 .article-grid {
 
     min-height: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    display: grid;
+    grid-template-columns: 312px minmax(0,1fr);
+    margin: 0.5em auto;
+    
   }
   
   /************************
@@ -38,6 +40,10 @@ PRODUCR STYLES
       &:hover{
         border: 1px solid #eaeaea;
         cursor: pointer;
+      }
+
+      &:active {
+        background-color: yellow;
       }
   
   
@@ -239,7 +245,7 @@ PRODUCR STYLES
   
     @media only screen and (min-width: 800px) {
       .products {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
     

@@ -1,76 +1,18 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+footer {
+  
+  
+  
+  background-color: #fff;
+  padding: 4em 0;
+  text-align: center;
 
-.footer {
-    
-
-  .footer-title {
-    margin: 1em 0 0.7em 0;
-   
+  ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
   }
 
-  li a,
-  p,
-  address,
-  time {
-    color: #160042;
-  }
 
-  a:hover{
-      color: $primary;
-  }
 
-  p.footer-title {
-    margin: 0;
-  }
 
-  address {
-    max-width: 270px;
-    margin: 1em 0;
-  }
-
-  .contact {
-    flex: 2;
-
-    &__margin {
-      margin-top: 10vh;
-
-      p {
-        opacity: 1;
-
-      }
-    }
-  }
-
-  li {
-    line-height: 2.8em;
-    list-style-type: none;
-  }
-
-  &__padding {
-    padding-top: 50px !important;
-    padding-bottom: 30px !important;
-  }
-
-  .footer-bottom {
-    justify-content: space-between;
-    position: relative;
-    align-content: center;
-    padding: 5vh 0 0;
-    &__logo {
-      height: 60px;
-      width: 60px;
-    }
-  }
-}
-
-@media screen and (min-width: 767px) {
-  .footer {
-    .footer-bottom {
-      &__legals {
-        text-align: right;
-      }
-    }
-  }
 }

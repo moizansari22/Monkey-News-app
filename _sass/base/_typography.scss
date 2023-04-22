@@ -14,7 +14,8 @@ body {
   font-family: "Inter", sans-serif;
   font-style: normal;
   -webkit-font-smoothing: antialiased; //line-height: 1.2em;
-  color: $text-color;
+  background: #F8F7F8;
+    color: #707070;
   font-weight: 400;
   font-size: clamp(16px, 1.25vw, 18px);
   line-height: 140%;

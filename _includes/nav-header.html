@@ -1,5 +1,5 @@
 <div class="nav-container">
-    <div class="top"></div>
+
     <div class="brand-icon"></div>
 
     
@@ -7,7 +7,9 @@
         <ul class="menus">
 
           <li class="{% if item.url == page.url %}  item--current{% endif %}">
-            <a href="/">Wizidelas</a>
+            <a href="/">
+              <img src="../assets/logos/logo.svg" class="logo" />
+            </a>
           </li>
 
           {% for item in site.navigation_header %}
@@ -26,9 +28,12 @@
 
         <div class="menus--end">
           <a class="input search" href="search.html">Search</a>
-          <a class="btn btn--large default" href="about-us.html"
-            >Register</a
+          <a class="btn btn--large btn-round default" href="about-us.html"
+            >Signup</a
           >
+          <a class="btn btn--large btn-round " href="about-us.html"
+          >Submit</a
+        >
         </div>
 
         <div class="menu-icon">

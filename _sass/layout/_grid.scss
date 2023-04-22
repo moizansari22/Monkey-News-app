@@ -1,262 +1,46 @@
-.container{
-    margin: auto;
-    padding: 0;
-}
+.aside {
+  padding-right: 0.5em;
+  &--inner {
+    background-color: #fff;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+    padding-bottom: 1.75em;
+    padding-top: 1em;
 
-/************************
-WRAPPER CONTAINER
-************************/
-.wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 15px;
-}
-
-.auto{
-    display: flex;
-    justify-content: center;
-}
-
-
-@media screen and (min-width: 767px) {
-
-    .wrapper{
-        padding: 0 40px;
+    h1 {
+      font-size: 0.9375rem;
+      padding: 0.625rem 0;
     }
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0.325rem 0.625rem;
 
-}
+      li a {
+        align-items: center;
 
-
-.left-indent{
-    margin-left: calc(50% + 10px);
-    width: calc(50% - 10px);
-}
-
-
-/************************
-PADDING ON SECTIONS
-************************/
-
-    .w-section{
-      margin: auto;
-      max-width: 960px;
-    }
-
-.section.headings{
-    max-width: 98%;
-    margin: auto;
-    padding: 8vh 3vw 4vh 3vw;
-}
-
-.section-padding {
-    padding: 4vh 1vw 4vh 1vw;
-}
-
-.lead-padding{
-    padding: 1em 0 0.5em  0;
-}
-
-.section-item{
-    align-self: center;
-    margin-bottom: 2em;
-  
-    &__content{
-      padding: 0.5em;
-      max-width: 600px;
-    }
-  }
-  
-  .item-img.belief{
-    height: 300px;
-    width: 100%;
-    background-image: url("../img/product1.svg");
-    background-size: 55%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 0;
-    background-color: #F5F8FD;
-  }
-
-  .item-img.person{
-    // background-image: url("../img/test-solution.svg");
-    background-color: #fee4c1;
-    background-size: cover;
-    background-position: center;
-  }
-
-  @media screen and (min-width: 767px) {
-    .section-padding {
-        padding: 9vh 4vw 9vh 4vw;
-    }
-
-    .section.headings{
-        max-width: 90%;
-
-        p{
-            max-width: 80%;
-            margin: auto;
-        }
-    }
-
-    .section-item{
-        
-        
-        margin-bottom: 2em;
-      
-        &__content{
-          
-          max-width: 600px;
-        }
-      }
-
-      .section-item.align-top{
-        align-self: flex-start;
-        padding-top: 2em;
-      }
-
-
-
-    .item-img.person{
-        max-width: 851px;
-        height: 482px;
-         
-       }
-}
-
-
-
-/************************************************/
-
-
-
-.mobile-only{
-    display: block;
-}
-
-.desktop-only{
-    display: none;
-}
-
-@media screen and (min-width: 767px) {
-    .mobile-only{
-        display: none;
-    }
-
-    .desktop-only{
-        display: block;
-    }
-}
-
-/************************
-LIST STYLES
-************************/
-ul{
-    padding-left: 16px;
-    // margin: 28px 0;
-
-
-}
-
-
-/************************
-MARKETING BLOCK STYLES
-************************/
-.block-border{
-    border: 1px solid $border-color;
-}
-
-.block-bg {
-    background-color: #ffffff;
-}
-
-/************************
-SIDE BLOCK STYLES
-************************/
-.side-image-block {
-    display: flex;
-    flex-direction: column;
-   
-    &__item {
-        flex: 1;
-        margin-top: 1em;
-        
-    }
-    &__content {
-        flex: 1;
-        max-width: 600px;
-        padding: 0 5em 0em 2em;
-    }
-}
-
-@media screen and (min-width: 765px) {
-    .side-image-block {
-        justify-content: space-between;
-        flex-direction: row;
-       
-    }
-}
-
-/************************
-TOP BLOCK STYLES
-************************/
-
-.top-image-block {
-  margin-bottom: 3em;
-  padding-bottom: 5em;
-  
-    &__item {
-        //margin-top: -18em;
-        height: 460px;
-        //overflow: hidden;
-        
-        margin-bottom: 6em;
-
-        img{
-            height: 100%;
-            object-fit: cover;
-            width: 100%;
-            border-radius: 4px !important;
-            
-        }
-    }
-    &__content {
-        flex: 1;
-   
-    }
-}
-
-/************************
-GRID SYSTEM
-************************/
-
-.flex-row {
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 60px;
-    row-gap: 60px;
-    grid-column-gap: 60px;
-    column-gap: 60px;    
-}
-
-.sm-gap{  
-    grid-column-gap: 20px;
-    column-gap: 20px;   
-}
-
-@media screen and (min-width: 767px) {
-    .flex-row {
         display: flex;
-        flex-direction: row;
-        .flex-col {
-            flex: 1; 
-
-            &--last{
-                margin-right: 0;
-            }
-        }
-
-      
+        font-size: 14px;
+        margin-bottom: 4px;
+        width: 100%;
+        background: #e8e8e8;
+        border-color: #e8e8e8;
+        border-radius: 0.2rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        padding: 0.25rem 0.5rem;
+        color: #212529;
+        font-weight: 400;
+      }
     }
+  }
 }
 
 
 
+.details{
+  background-color: #fff;
+  max-width: 800px;
+}
