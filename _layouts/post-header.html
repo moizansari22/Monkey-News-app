@@ -16,30 +16,46 @@
     {% assign page_description = page.description | strip_html | truncate:200 | escape %}
     {% assign page_image = page.image | default: "/assets/images/default-og-image.jpg" %}
     {% assign page_image_url = site_url | append: page_image %}
+
+    {% assign priceBefore = page.before | times: 1.0  %}
+    {% assign priceAfter = page.after | times: 1.0 %}
+    {% assign priceDifference = priceBefore | minus: priceAfter   %}
+    {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
+    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
+
+    {% assign first_image = page.content | split: '<img ' | last | split: '>' | first %}
+    {% if first_image contains 'src=' %}
+      {% assign src_index = first_image | split: 'src=' | last | split: ' ' | first %}
+      {% assign src = src_index | remove: '"' %}
+      {% endif %}
     
     <!-- Google Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "{{ page_type }}",
-      "name": "{{ page_title }}",
-      "description": "{{ page_description }}",
-      "image": "{{ page_image_url }}"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "url": "{{page.url}}"
+        "image": "{{src}}",
+        "name": "{{discountPercentage | times: 100 | round }}% off {{ page_title }}",
+        "description": "Price Before was RM{{ page.before }} and price is now  RM{{ page.after }} for {{ page_description }}",
+        "priceCurrency": "RM",
+        "offers": {
+          "@type": "AggregateOffer",
+          "highPrice": "{{page.before}}",
+          "lowPrice": "{{page.after}}",
+        }
+      }
+      
     </script>
     
     <!-- Facebook Open Graph -->
     <meta property="og:type" content="{{ page_type }}" />
-    <meta property="og:title" content="{{ page_title }}" />
-    <meta property="og:description" content="{{ page_description }}" />
+    <meta property="og:title" content="{{discountPercentage | times: 100 | round }}% off {{ page_title }}" />
+    <meta property="og:description" content=" Price Before was RM{{ page.before }} and price is now  RM{{ page.after }} for {{ page_description }}" />
     <meta property="og:url" content="{{ site_url }}{{ page.url }}" />
     
 
-    {% assign first_image = page.content | split: '<img ' | last | split: '>' | first %}
-{% if first_image contains 'src=' %}
-  {% assign src_index = first_image | split: 'src=' | last | split: ' ' | first %}
-  {% assign src = src_index | remove: '"' %}
-  {% endif %}
+
 
 <meta property="og:image" content="{{ src }}" />
     
@@ -49,8 +65,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta name="twitter:description" content="{{ page.description }}" />
+    <meta name="twitter:title" content="{{discountPercentage | times: 100 | round }}% off {{ page_title }}" />
+    <meta name="twitter:description" content=" Price Before was RM{{ page.before }} and price is now  RM{{ page.after }} for {{ page_description }}" />
     <meta name="twitter:image" content="{{ src }}" />
     <meta name="twitter:site" content="{{ site.twitter_username }}" />
     <meta name="twitter:creator" content="{{ page.author | default: site.author }}" />
