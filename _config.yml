@@ -104,7 +104,7 @@ At Wizideals, we understand that everyone loves a great deal, which is why we st
 We also have a special section for time-limited deals, so you never miss out on a great opportunity to save. And with new deals added regularly, you'll always find something new and exciting on our website.
 
 So why wait? Browse our selection of deals today and start saving on your favorite products and services. Happy shopping with Wizideals!"
-url: "" # Site url, also used in jekyll-seo-tag
+url: "https://wizideals.com/" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 
 # date_format: "%-d %B %Y" # Blog post date formatting using placeholder formatting
