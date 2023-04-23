@@ -72,6 +72,11 @@
     <meta name="twitter:creator" content="{{ page.author | default: site.author }}" />
     
 
+    <meta name="pinterest:description" content="{{page.description}}"/>
+    <meta name="pinterest:url" content="{{site.url}}{{page.url}}"/>
+    <meta name="pinterest:image" content="{{src}}"/>
+    <meta name="pinterest:category" content="{{page.category}}"/>
+    <meta property="pinterest:title" content="{{page.title}}"/>
   
 
     <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
