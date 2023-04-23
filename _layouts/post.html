@@ -1,36 +1,100 @@
 ---
-layout: default
+layout: post-header
 ---
-
+{% assign priceBefore = page.before | times: 1.0  %}
+{% assign priceAfter = page.after | times: 1.0 %}
+{% assign priceDifference = priceBefore | minus: priceAfter   %}
+{% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
+{% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
+{% assign mylink = item.url | append: page.productlink %}
 
 <main class="container">
 
   <article class="details">
 
-    <h1>{{ page.title }}</h1>
-    {% include post-meta.html %}
-    <!-- {{ content }} -->
 
-       <!-- {% assign foundImage = 0 %}
-            {% assign images = page.content | split:"<img " %}
-            {% for image in images %}
-              {% if image contains 'src' %}
-          
-                  {% if foundImage == 0 %}
-                      {% assign html = image | split:"/>" | first %}
-                      <img {{ html }} />
-                      {% assign foundImage = 1 %}
-                  {% endif %}
-              {% endif %}
-            {% endfor %} -->
+<div class="disocunt-details">
 
-    {% include nav-share.html %}
+  
 
-    {% include post-comments.html %}
+    <h5 class="discount-amount">Buy {{page.title}} at {{discountPercentage | times: 100 | round }}% off </h5>
+        
+    <div class="logo-area">
+      <div class="logo-item">
+        <img src="/img/wizideals-black.svg" />
+      </div>
+      <div class="process"></div>
+      <div class="logo-item">{{page.brand}}</div>
+    </div>
+    <p class="discount-msg">
+      You are being redirected to the {{page.brand}} website <br/>  via Wizideals in <span id="countdown"></span>  sec
+    </p>
+    
+    <p>if you are not redirected <a style="display:none" id="redirectUrl" target="_blank" href="{{mylink}}">Click here </a></p>
+    
+    <!-- <p>Complete your purchase now to unlock this amazing discount. Don't miss out, this offer won't last long! </p> -->
+
+    
+
+  </div>
+    
+    
+
+    
+
+    <!-- {% include nav-share.html %} -->
+
+    <!-- {% include post-comments.html %} -->
+
+
+
+
+</div>
+
+
 
   </article>
 
 
 </main>
+
+<script>
+
+const hiddenDiv = document.getElementById('redirectUrl');
+
+ 
+ 
+ const redirectUrl = document.getElementById("redirectUrl").getAttribute("href");
+
+
+
+const countdownEl = document.getElementById('countdown');
+
+
+let countdownTime = 5;
+
+
+const countdownTimer = setInterval(() => {
+  
+  countdownEl.innerHTML = countdownTime;
+
+  
+  countdownTime--;
+
+  
+  if (countdownTime < 0) {
+    clearInterval(countdownTimer);
+
+    hiddenDiv.style.display = 'block';
+
+    
+    
+    document.getElementById('redirectUrl').click()
+    
+  }
+}, 1000);
+
+
+</script>
 
 

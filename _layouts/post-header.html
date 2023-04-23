@@ -33,14 +33,25 @@
     <meta property="og:title" content="{{ page_title }}" />
     <meta property="og:description" content="{{ page_description }}" />
     <meta property="og:url" content="{{ site_url }}{{ page.url }}" />
-    <meta property="og:image" content="{{ page_image_url }}" />
-    <meta property="og:site_name" content="{{ site_name }}" />
+    
+
+    {% assign first_image = page.content | split: '<img ' | last | split: '>' | first %}
+{% if first_image contains 'src=' %}
+  {% assign src_index = first_image | split: 'src=' | last | split: ' ' | first %}
+  {% assign src = src_index | remove: '"' %}
+  {% endif %}
+
+<meta property="og:image" content="{{ src }}" />
+    
+
+    
+    <meta property="og:site_name" content="{{ site.name }}" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ page_title }}" />
-    <meta name="twitter:description" content="{{ page_description }}" />
-    <meta name="twitter:image" content="{{ page_image_url }}" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.description }}" />
+    <meta name="twitter:image" content="{{ src }}" />
     <meta name="twitter:site" content="{{ site.twitter_username }}" />
     <meta name="twitter:creator" content="{{ page.author | default: site.author }}" />
     
@@ -51,7 +62,8 @@
     <meta name="theme-color" content="{{ site.manifest.theme_color | default: '#242e2b' }}"/>
 
     
-      <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
+      
+      <link rel="stylesheet" href="{{ "./css/style.css" | relative_url }}" type="text/css" media="all">
  
 
     
@@ -64,8 +76,10 @@
   </head>
 
   <body class="">
+
+    <div class="post-header"></div>
     
-    {% include site-header.html %}
+    
     {{ content }}
 
     {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}

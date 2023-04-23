@@ -38,9 +38,92 @@
   }
 }
 
-
+.post-header{
+  background-color: #741fa2;
+  box-shadow: 0 3px 5px rgba(0,0,0,.12);
+  height: 60px;
+  background-image: url("../../assets/logos/logo.svg");
+  background-position: center;
+  background-size: 160px;
+  background-repeat: no-repeat;
+}
 
 .details{
   background-color: #fff;
   max-width: 800px;
+  margin: 20px auto;
+  padding: 2em 4em;
+  text-align: center;
+}
+
+.disocunt-details {
+  margin: auto;
+  padding: 50px 16px;
+  max-width: 740px;
+
+  .btn {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.4;
+    padding: 17px 20px 18px;
+    min-width: 200px;
+    border-radius: 30px;
+    text-align: center;
+    background: #ed3560;
+    border: 0;
+  }
+}
+
+.discount-amount {
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: #fe0955;
+  text-align: center;
+  padding: 15px 0 9px;
+  margin-bottom: 30px;
+}
+
+.discount-msg {
+  font-size: 22px;
+  color: #333;
+  line-height: 1.27;
+  letter-spacing: -1.1px;
+  text-align: center;
+  padding: 32px 0 56px 0;
+  margin-bottom: 56px;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.discount-ads ul {
+
+  list-style: disc;
+
+
+li{
+  margin: 16px 16px;
+}
+ 
+}
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+  .logo-item {
+    width: 190px;
+    height: 90px;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 16%);
+    border: solid 1px #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+  }
+
+  .process {
+    width: 92px;
+    height: 90px;
+    background: url("../../assets/loading.gif") 50% 50% no-repeat;
+  }
 }
