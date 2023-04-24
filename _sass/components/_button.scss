@@ -11,17 +11,19 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.1em;
-    // max-height: 36px;
-    line-height: 1.85rem;
+    max-height: 44px;
+    line-height: 1.65rem;
     font-weight: 500;
     letter-spacing: -.01em;
     white-space: nowrap;
     align-items: center;
-    border-radius: 50vh;
+    
     justify-content: center;
     padding: 10px 20px;
     -webkit-box-pack: center;
     border: 0;
+    margin: 0 0.9em;
+
     
 
      i{
@@ -54,7 +56,7 @@
 
 
 .btn-round{
-    border-radius: 1.5em;
+    border-radius: 50vh;
 }
 
 
