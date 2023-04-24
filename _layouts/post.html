@@ -6,7 +6,9 @@ layout: post-header
 {% assign priceDifference = priceBefore | minus: priceAfter   %}
 {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
 {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
-{% assign mylink = item.url | append: page.productlink %}
+{% assign mylink = site.url | append: page.productlink %}
+
+
 
 <main class="container">
 

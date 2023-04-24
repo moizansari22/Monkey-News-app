@@ -90,6 +90,13 @@
     {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
     {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
 
+
+    {% assign first_image = page.content | split: '<img ' | last | split: '>' | first %}
+    {% if first_image contains 'src=' %}
+      {% assign src_index = first_image | split: 'src=' | last | split: ' ' | first %}
+      {% assign src = src_index | remove: '"' %}
+      {% endif %}
+
 {%if age <= 120 %}
 
 <li class="product" itemprop="item" itemtype="http://schema.org/Product">
@@ -101,7 +108,6 @@
   <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope>
     <meta itemprop="name" content="{{page.brand}}" />
   </div>
-  <!-- <link itemprop="image" href="{{post.cover }}" /> -->
 
 
   {% assign mydata = site.data.mydata %} 
@@ -118,7 +124,6 @@
 
 <div class="product__img">
 
- 
   
      {% assign foundImage = 0 %}
             {% assign images = page.content | split:"<img " %}

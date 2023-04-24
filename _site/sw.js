@@ -1,8 +1,8 @@
-const version = '20230424034312';
+const version = '20230424121150';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/clothing/sephora/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html","/clothing/zalora/frayed-hem-denim-shorts-teenage-girl-mango-teen-malaysia.html","/categories/","/about/","/privacy/","/deals/","/index.html","/manifest.json","/offline.html","/assets/search.json","/search/","/css/style.css","/assets/styles.css","/redirects.json","/sitemap.xml","/robots.txt","/feed.xml","/css/style.css.map","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/clothing/pink-pleated-waist-frill-mini-dress.html","/men/clothing/mock-neck-top.html","/women/clothing/marc-jacobs-mini-grind-satchel-tote-bag-m0016132-smoked-almond-multi.html","/bow-print-shirt-with-guipure-collar.html","/men/bow-print-shirt-with-guipure-collar.html","/clothing/lovebonito/calia-woven-knit-frill-sleeve-top.html","/clothing/sephora/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html","/clothing/zalora/frayed-hem-denim-shorts-teenage-girl-mango-teen-malaysia.html","/categories/","/about/","/privacy/","/deals/","/index.html","/manifest.json","/offline.html","/assets/search.json","/search/","/css/style.css","/assets/styles.css","/redirects.json","/sitemap.xml","/robots.txt","/feed.xml","/css/style.css.map","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 

@@ -16,19 +16,7 @@ PRODUCR STYLES
   }
 
 
-  @media only screen and (min-width: 1024px) {
 
-    .article-grid {
-
-    grid-template-columns: 312px minmax(0,1fr);
-
-    .aside{
-      display: block;
-    }
-    }
-
-  }
-  
   /************************
   PRODUCTS STYLES
   ************************/
@@ -254,20 +242,48 @@ PRODUCR STYLES
   
   
   
-  @media only screen and (min-width: 660px) {
+ 
+
+
+
+  @media only screen and (min-width: 640px) {
     .products {
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
+
+  
     
   
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 900px) {
       .products {
         grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    @media only screen and (min-width: 1170px) {
+
+    
+
+
+    @media only screen and (min-width: 968px) {
+      .products {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .article-grid {
+
+        grid-template-columns: 300px minmax(0,1fr);
+    
+        .aside{
+          display: block;
+        }
+        }
+    }
+
+
+      
+    @media only screen and (min-width: 1100px) {
       .products {
         grid-template-columns: repeat(4, 1fr);
       }
