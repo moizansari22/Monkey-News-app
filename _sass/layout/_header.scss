@@ -5,103 +5,100 @@
 MAINMENU
 ******************/
 
-.header{
-  
-  
+.header {
   background-color: #741fa2;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.12);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12);
   // position: sticky;
   // top: 0px;
   // left: 0;
   width: 100%;
   z-index: 60;
   transform: translateZ(0);
-
 }
 
-.top{
+.top {
   z-index: 10;
-    
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    display: flex;
-    background-color: #5c1882;
-    align-items: center;
-    transition: background-color .3s;
-    color: #fff;
+
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #5c1882;
+  align-items: center;
+  transition: background-color 0.3s;
+  color: #fff;
 }
-.nav-container{
-  padding: 8px 0;
-  height: 56px;
+.nav-container {
   max-width: 1280px;
   margin: auto;
   width: 100%;
-
+  padding: 0 16px
 }
 
 .nav {
-  transition: -webkit-transform 1s cubic-bezier(0.48, 0, 0.12, 1);
-  transition: transform 1s cubic-bezier(0.48, 0, 0.12, 1);
-  transition: transform 1s cubic-bezier(0.48, 0, 0.12, 1),
-    -webkit-transform 1s cubic-bezier(0.48, 0, 0.12, 1);
-
-  justify-content: space-between;
+  
+  
   display: flex;
   font-weight: 500;
   align-items: flex-start;
+  padding: 0.7em 0;
 
   .logo {
-    flex: 1;
-    opacity: 1;
-    height: auto;
-
-    object-fit: contain;
-    align-self: center;
-    max-width: 90px;
-    object-fit: contain;
-    left: 0;
+    background-image: url("../../assets/logos/logo.svg");
+    background-size: 156px;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 156px;
+    height: 3.4375em;
+    margin-right: 1em !important;
   }
 
   .menus {
     align-self: center;
     display: none;
     flex-direction: column;
-    background-color: #fff;
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     height: 100vh;
     padding: 4em;
-    flex:1;
+    flex: 1;
     opacity: 0;
     transition: all 0.5s ease;
     z-index: -9;
 
+    .mobile-menu-btn{
+      display: none;
+    }
+
     a {
-     
-      margin-top: 1em;
-      font-weight: 200;
+      padding: 0 0.5em !important;
+      height: 36px;
+      font-weight: 500;
+      font-size: 14px;
       display: flex;
       align-items: center;
+      color: #ffffffcc;
     }
 
     a.btn {
-     
       padding: 6px 16px;
     }
 
-    &--end{
-      display:flex;
-
-      .search{
+    &--end {
+      display: flex;
+      flex: 1;
+      .search {
         width: 330px;
-        margin-right:16px;
-        border-radius: 1.5em;
+
+        border-radius: 50vh;
+        margin-left: auto;
+        font-size: 1em;
+        line-height: 2.25em;
+        color: #8d8b8b;
+        padding: 5px 16px;
       }
-      
     }
   }
 
@@ -117,6 +114,7 @@ MAINMENU
   height: 35px;
   z-index: 9999;
   margin-top: 2em;
+  display: none;
 
   span {
     display: block;
@@ -150,15 +148,8 @@ MAINMENU
   }
 }
 
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 1024px) {
   .nav {
-    
-
-    .logo {
-      opacity: 1;
-      max-width: 180px;
-    }
-
     .menus {
       position: relative;
       z-index: 9;
@@ -168,26 +159,11 @@ MAINMENU
       padding: 0;
       background-color: transparent;
       display: flex;
-
-      a {
-       
-        margin: 0 1rem 0 0;
-        padding: 0.25rem;
-        margin-top: 0;
-        color: #fff;
-      }
-
-      a.logo{
-        margin: 0;
-        width: 100%;
-        max-width: 120px;
-    margin-right: 2em;
-      }
     }
-  }
 
-  .menu-icon {
-    display: none;
+    .mobile-menu-btn{
+      display: none;
+    }
   }
 }
 
@@ -220,16 +196,10 @@ MAINMENU
     display: flex;
     flex-direction: row;
     flex: 1;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    
   }
   .nav {
     position: relative;
-    height: auto;
     display: flex;
-    left: 0;
-    width: auto;
     align-items: center;
   }
   .nav__items {
@@ -269,6 +239,5 @@ MAINMENU
   #logo {
     align-self: flex-start;
     margin-left: 0;
-
   }
 }

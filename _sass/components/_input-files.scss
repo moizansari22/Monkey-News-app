@@ -81,11 +81,13 @@ VERTICAL FORMS
 .input {
     display: inline-block;
     width: 100%;
-    height: 44px;
-    padding: 9px 10px;
-    font-size: 16px;
+    font-size: .875rem;
+    line-height: 1.85rem;
+    
+    padding: 7px 16px;
+    border-radius: 50vh;
     font-weight: normal;
-    line-height: 22px;
+    
     color: #33475b;
     border: 1px solid #cbd6e2;
     background-color: #f5f8fa;
