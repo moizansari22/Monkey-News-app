@@ -2,7 +2,7 @@
 layout: deals
 permalink: men/
 mainCategory: men
-category: men
+category: all
 pagination:
   enabled: true
   category: men,
