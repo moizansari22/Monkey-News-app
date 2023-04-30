@@ -2,7 +2,7 @@
 layout: deals
 permalink: women/
 mainCategory: women
-category: all
+category: women
 pagination:
   enabled: true
   category: women

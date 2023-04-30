@@ -13,18 +13,15 @@ layout: default
   <ul class="products">
     
 
-    {% if paginator.posts.size > 0 %}
+
   
         {% for post in paginator.posts %}
-        {% if post.categories contains page.company or page.company  == blank %}
+       
         {%- include post-list.html -%}
-        {% endif %}
+     
         {% endfor %}
 
 
-        {% else %}
-  <p>No posts found.</p>
-{% endif %}
         </ul>
   
      
