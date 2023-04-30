@@ -6,7 +6,14 @@ layout: post-header
 {% assign priceDifference = priceBefore | minus: priceAfter   %}
 {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
 {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
-{% assign mylink = site.url | append: page.productlink %}
+<!-- {% assign mylink = sitem.url | append: page.productlink %} -->
+
+
+{% for item in site.data.brands %}
+{% if page.brand contains item.brand %} 
+  {% assign mylink = item.url | append: page.productlink %}
+{% endif %}
+{% endfor %}
 
 
 
@@ -32,6 +39,7 @@ layout: post-header
       You are being redirected to the {{page.brand}} website <br/>  via Wizideals in <span id="countdown"></span>  sec
     </p>
     
+
     <p>if you are not redirected <a style="display:none" id="redirectUrl" target="_blank" href="{{mylink}}">Click here </a></p>
     
     <!-- <p>Complete your purchase now to unlock this amazing discount. Don't miss out, this offer won't last long! </p> -->
