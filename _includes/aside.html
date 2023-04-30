@@ -2,7 +2,25 @@
     <div class="aside--inner">
       <h1>Top Deals</h1>
     <ul>
-      <li> <a href="/"> A hot deal above 50%</a></li>
+      {% for post in site.posts  limit:10 %}
+
+      {% assign priceBefore = post.before | times: 1.0  | round: 2 %}
+    {% assign priceAfter = post.after | times: 1.0  | round: 2%}
+    {% assign priceDifference = priceBefore | minus: priceAfter   %}
+    {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
+    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore | times: 100  %}
+
+    {% if discountPercentage > 49 %}
+      <li> <a href="/"> 
+        {{discountPercentage}}
+        {{post.category}}
+        {{page.mainCategory}}
+        {{post.Gender}}
+        <!-- and page.mainCategory contains post.gender  -->
+      </a></li>
+
+      {% endif %}
+      {% endfor %}
   </ul> 
 
   </div>

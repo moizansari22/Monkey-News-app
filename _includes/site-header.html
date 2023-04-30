@@ -1,9 +1,17 @@
 <header class="header">
-  <div class="common-header">F**k cashback, save money today</div>
+  
     <div class="nav-wrapper content-area">
       <div class="top-header">
 
         <ul class="top-header__left">
+          <li>
+            <a class="top-header__logo" href="{{ "./" | relative_url }}" alt="{{ site.title | escape }} LOGO HERE">
+                
+              <span class="long-logo">
+                <img src="/assets/logos/logo.svg"/>
+              </span>
+            </a>
+          </li>
           <li><a {% if page.mainCategory == 'women' %} data-current="active" {% endif %} href="/women/">Women</a></li>
           <li><a {% if page.mainCategory == 'men' %} data-current="active" {% endif %} href="/men/">Men</a></li>
           <li><a {% if page.mainCategory == 'kids' %} data-current="active" {% endif %}  href="/kids/">Kids</a></li>
@@ -11,13 +19,8 @@
 
           <ul class="top-header__middle">
 
-            <li>
-              <a class="top-header__logo" href="{{ "./" | relative_url }}" alt="{{ site.title | escape }} LOGO HERE">
-                  
-                <span class="long-logo">
-                  <img src="/assets/logos/logo.svg"/>
-                </span>
-              </a>
+            <li class="search-wrapper">
+             <div class="search"></div>
             </li>
 
             <!-- <li><a {% if page.mainCategory == 'kids' %} data-current="active" {% endif %}  href="/kids/">View As</a></li>
@@ -79,19 +82,7 @@
           
           
         {% endif %}
-        <li class="search-wrapper">
-          <!-- <a class="menu-icon">
-             search
-          </a> -->
-
-           <div class="search">
-            <input type="text" placeholder="search" />
-            <span class="icon">
-              <p><i class="gg-search"></i></p>
-            </span>
-            </div>
-            
-        </li>
+   
 
         </ul>
         {% endif %}
@@ -103,4 +94,16 @@
     </div>
     
 </header>
+
+<div class="common-header">
+  <ul>
+  
+</ul>
+
+<ul>
+ <h3>Eliquid</h3>
+ <p>Our online eliquids vape juice range is second to none in the UK. Why? We have the wide range of e-liquids from leading vape juice brands, including Six Licks, Wild Roots, Dinner Lady & Ohm Brew. No matter which vape Eliquid flavours you’re searching for, we’ve got them. Browse below for everything from Nic salts to Shortfills, fruity flavours to cool menthols</p>
+
+</ul>
+</div>
 
