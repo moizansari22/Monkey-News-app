@@ -57,17 +57,28 @@
       <span itemprop="priceCurrency" content="RM">RM</span>
       <span itemprop="price" content="">{{ page.before }}</span>
     </div>
+    
+    <div class="product__highlights">
+    {% for category in page.categories %}
+    <span>{{category}} </span> <p class="separator">|</p>
+{% endfor %}
+</div>
     <div class="price">
-       <div class="whole"> <span class="price-before">RM{{ page.before }}</span> RM{{ page.after }}  </div>
+       <div class="whole"> RM{{ page.after  }}  </div>
+
+       <div class="price-wrapper">
+       <p class="price-before">RM{{ page.before}}</p> 
+       <span class="coupon-highlight">  
+        {{discountPercentage | times: 100 | round }}% OFF
+       </span>
+      </div>
     </div>
 
-    <a href="{{page.url}}" target="_blank">details</a>
+    <!-- <a href="{{page.url}}" target="_blank">details</a> -->
 
 
 
-    <div class="coupon-highlight">  
-     {{discountPercentage | times: 100 | round }}%
-    </div>
+ 
 
 
   </div>

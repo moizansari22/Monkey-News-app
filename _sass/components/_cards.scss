@@ -46,8 +46,9 @@ PRODUCR STYLES
       padding: 0.3rem 0.3rem 0;
       border-radius: 10px;
       // text-align: center;
-      margin-bottom: 1.875rem;
+      // margin-bottom: 1.875rem;
       border: 1px solid transparent;
+      height: 100%;
       
       &:hover{
         border: 1px solid #eaeaea;
@@ -56,6 +57,30 @@ PRODUCR STYLES
 
       &:active {
         background-color: yellow;
+      }
+
+      &__highlights{
+        color: #666;
+        display: flex;
+
+        span{
+          border-bottom: 1px dashed;
+          font-size: 13px;
+
+        }
+
+        .separator{
+          color: #ddd;
+          width: 8px;
+          text-align: center;
+          font-size: 10px;
+          padding-top: 7px;
+          margin: 0;
+
+          &:last-child{
+            display: none;
+          }
+        }
       }
   
   
@@ -67,15 +92,17 @@ PRODUCR STYLES
   
       &__details {
         padding: 4px 8px;
+        display: flex;
+        flex-direction: column;
       }
   
       &__category {
         margin-bottom: 0;
-        color: #000;
+        color: #008500;
         font-size: 16px;
         line-height: 16px;
         margin: 4px 0;
-        font-weight: bold;
+        font-weight: 400;
       }
   
       .intro {
@@ -93,15 +120,17 @@ PRODUCR STYLES
         
         font-size: 15px;
         line-height: 22px;
-        color: #000;
+        font-weight: 500;
+        color: #0090e3;
         white-space: normal;
         padding: 4px 0 0 0;
-        margin-bottom: 6px;
+        margin-bottom: 12px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: initial;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
+        height: 52px;
         -webkit-box-orient: vertical;
         
       }
@@ -188,10 +217,9 @@ PRODUCR STYLES
   .price {
     position: relative;
     font-size: 14px;
-    font-weight: bold;
-    display: flex;
+    font-weight: 400;
     font-size: 16px;
-    // justify-content: center;
+    margin-top: 0.7rem;
     .currency {
       position: relative;
       padding-right: 0.1rem;
@@ -205,35 +233,49 @@ PRODUCR STYLES
     .whole {
       padding-right: 0.2rem;
       display: flex;
+      color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
       
     }
   
     .price-before {
       position: relative;
-      color: red;
+      color: #666666;
       opacity: 0.8;
-      font-size: 17px;
+      font-size: 14px;
+      line-height: 16px;
       padding-right: 6px;
       text-decoration: line-through;
+      border-right: 1px solid #767676;
+      font-weight: 400;
+    }
+
+    .price-wrapper{
+      display: flex;
     }
   }
   
   .coupon-highlight {
-    position: absolute;
-    top: 12px;
-    right: 15px;
+    
+    
     border-radius: 2px;
     text-align: center;
     text-transform: uppercase;
     pointer-events: none;
-    background: #f44343;
-    color: #fff;
-    font-size: 12px;
-    line-height: 19px;
-    padding: 1px 6px;
+    // background: #f44343;
+    // color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    // padding: 1px 6px;
     z-index: 2;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 600;
+    align-self: baseline;
+    margin-left: 6px;
+    color: #333333;
+    
   }
   
   

@@ -26,8 +26,8 @@ layout: default
     {% assign current_date = 'now' %}
     {% assign age = current_date | date: "%s" | minus: post_date | date: "%j" | minus: 1 %}
 
-    {% assign priceBefore = page.before | times: 1.0  %}
-    {% assign priceAfter = page.after | times: 1.0 %}
+    {% assign priceBefore = page.before | times: 1.0  | round: 2 %}
+    {% assign priceAfter = page.after | times: 1.0  | round: 2%}
     {% assign priceDifference = priceBefore | minus: priceAfter   %}
     {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
     {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
