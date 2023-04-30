@@ -1,0 +1,61 @@
+<aside class="aside">
+    <div class="aside--inner">
+      <h1>Hotest</h1>
+    <ul>
+      <li> <a href="/"> A hot deal above 50%</a></li>
+  </ul> 
+
+  </div>
+
+  
+  <div class="aside--inner">
+
+  <ul>
+    {% assign pages = site.data.samplelist.menu %}
+      
+    {% for entry in pages.subfolderitems %}
+    
+    {% if entry.category contains page.category and entry.mainCategory contains page.mainCategory  %} 
+    <li>
+     
+      <a {% if page.company contains entry.page %} data-current="active" {% endif %}  class="asidelinks__item"  href="/{{page.mainCategory}}/{{entry.page}}">
+        <span>{{ entry.name }}</span>
+      </a>
+ 
+    </li>
+
+    {% elsif page.company == "all" or page.category == "all" or page.pageLevel == "mainBrandLevel" %}
+    <li>
+     
+      <a {% if page.company contains entry.page %} data-current="active" {% endif %}  class="asidelinks__item"  href="/{{page.mainCategory}}/{{entry.page}}">
+        <span>{{ entry.name }}</span>
+      </a>
+ 
+    </li>
+    
+
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  </div>
+
+
+   <div class="aside--inner">
+      <h1>Discounts</h1>
+    <ul>
+      <li> <a href="/{{page.mainCategory}}/30-percent-off">30% above</a></li>
+      <li> <a href="/{{page.mainCategory}}/40-percent-off">40% above</a></li>
+      <li> <a href="/{{page.mainCategory}}/50-percent-off">50% above</a></li>
+      <li> <a href="/{{page.mainCategory}}/60-percent-off">60% above</a></li>
+      <li> <a href="/{{page.mainCategory}}/70-percent-off">70% above</a></li>
+  </ul> 
+
+  </div>
+
+  
+
+
+
+
+  </aside>

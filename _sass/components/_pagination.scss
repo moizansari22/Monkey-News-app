@@ -1,0 +1,40 @@
+/*******************************************
+PAGINATION COMPONENT 
+******************************************/
+
+.pager{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    
+    background-color: #fff;
+    border-radius: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5em 2em;
+    padding: 0;
+
+    .previous, .next{
+        align-self: center;
+    }
+
+    ol {
+        align-items: center;
+        display: flex;
+    
+      a{
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        box-sizing: border-box;
+        font-weight: 500;
+        height: 56px;
+        width: 44px;
+      }  
+
+      a.selected{
+        border-radius: 50%;
+        color: red;
+      }
+    }
+}

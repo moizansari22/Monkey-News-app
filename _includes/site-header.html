@@ -1,12 +1,106 @@
-<div class="top">
-  Logo da Lojas Renner Por tempo limitado 10% de cashback (era 5%)
-</div>
 <header class="header">
-    {% include nav-header.html %}
+  <div class="common-header">F**k cashback, save money today</div>
+    <div class="nav-wrapper content-area">
+      <div class="top-header">
+
+        <ul class="top-header__left">
+          <li><a {% if page.mainCategory == 'women' %} data-current="active" {% endif %} href="/women/">Women</a></li>
+          <li><a {% if page.mainCategory == 'men' %} data-current="active" {% endif %} href="/men/">Men</a></li>
+          <li><a {% if page.mainCategory == 'kids' %} data-current="active" {% endif %}  href="/kids/">Kids</a></li>
+        </ul>
+
+          <ul class="top-header__middle">
+
+            <li>
+              <a class="top-header__logo" href="{{ "./" | relative_url }}" alt="{{ site.title | escape }} LOGO HERE">
+                  
+                <span class="long-logo">
+                  <img src="/assets/logos/logo.svg"/>
+                </span>
+              </a>
+            </li>
+
+            <!-- <li><a {% if page.mainCategory == 'kids' %} data-current="active" {% endif %}  href="/kids/">View As</a></li>
+            <li><a {% if page.mainCategory == 'kids' %} data-current="active" {% endif %}  href="/kids/">Categories</a></li>
+            <li><a {% if page.mainCategory == 'kids' %} data-current="active" {% endif %}  href="/kids/">Brands</a></li> -->
+           
+           
+       
+          </ul>
+
+          <ul class="top-header__right">
+            <li><a class="btn" id="signup" href="#">Become a member</a></li>
+            <li><a href="/about/">About us</a></li>
+          </ul>
+
+        
+  
+    
+    
+        </div>
+        {% if page.mainCategory != blank %}
+        <ul class="subnav">
+          <li>
+          <a id="menu-icon">
+            <div class="icon"><i class="gg-feed"></i></div>
+             <span>brands {{page.company}}</span>
+          </a>
+        </li>
+
+        
+
+
+          {% if page.mainCategory == "women" %}
+          
+          <li><a {% if page.category contains 'clothing' %} data-current="active" {% endif %}  href="/women/clothing/">Clothing</a></li>
+          <li><a {% if page.category contains 'shoes' %} data-current="active" {% endif %}  href="/women/shoes/">Shoes</a></li>
+          <li><a {% if page.category contains 'bags' %} data-current="active" {% endif %}  href="/women/bags/">Bags</a></li>
+          <li><a {% if page.category contains 'accessories' %} data-current="active" {% endif %}  href="/women/accessories/">Accessories</a></li>
+          <li><a {% if page.category contains 'beauty' %} data-current="active" {% endif %}  href="/women/beauty/">Beauty</a></li>
+          
+          {% endif %}
+
+          {% if page.mainCategory == "men" %}
+        
+          
+          <li><a {% if page.category contains 'clothing' %} data-current="active" {% endif %}  href="/men/clothing/">Clothing</a></li>
+          <li><a {% if page.category contains 'shoes' %} data-current="active" {% endif %}  href="/men/shoes/">Shoes</a></li>
+          <li><a {% if page.category contains 'bags' %} data-current="active" {% endif %}  href="/men/bags/">Bags</a></li>
+          <li><a {% if page.category contains 'accessories' %} data-current="active" {% endif %}  href="/men/accessories/">Accessories</a></li>
+          <li><a {% if page.category contains 'grooming' %} data-current="active" {% endif %}  href="/men/grooming/">Grooming</a></li>
+          
+        
+        {% endif %}
+
+        {% if page.mainCategory == "kids" %}
+        
+          <li><a {% if page.category contains 'boys-fashion' %} data-current="active" {% endif %}  href="/kids/boys-fashion/">Boys Fashion</a></li>
+          <li><a {% if page.category contains 'girls-fashion' %} data-current="active" {% endif %}  href="/kids/girls-fashion/">Girls Fashion</a></li>
+          
+          
+        {% endif %}
+        <li class="search-wrapper">
+          <!-- <a class="menu-icon">
+             search
+          </a> -->
+
+           <div class="search">
+            <input type="text" placeholder="search" />
+            <span class="icon">
+              <p><i class="gg-search"></i></p>
+            </span>
+            </div>
+            
+        </li>
+
+        </ul>
+        {% endif %}
+        
+       
+     
+     
+        
+    </div>
+    
 </header>
-<div class="lead-header">
-  <div class="container">
-  <h1> Don't work to find deals. Let the deals find you.</h1>
-  <p> Register Now and get deals straight to your inbox.</p>
-</div>
-</div>
+

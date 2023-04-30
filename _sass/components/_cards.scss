@@ -12,6 +12,12 @@ PRODUCR STYLES
     .aside{
       display: none;
     }
+
+    .inner-grid{
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
     
   }
 
@@ -286,6 +292,12 @@ PRODUCR STYLES
     @media only screen and (min-width: 1100px) {
       .products {
         grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      .products {
+        grid-template-columns: repeat(7, 1fr);
       }
     }
     

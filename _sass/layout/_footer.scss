@@ -5,11 +5,13 @@ footer {
   background-color: #fff;
   padding: 4em 0;
   text-align: center;
+  overflow: hidden;
 
   ul{
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
   }
 
 

@@ -85,6 +85,8 @@ GEM
       notion-ruby-client (~> 1.0)
       notion_to_md (~> 2.2)
     jekyll-paginate (1.1.0)
+    jekyll-paginate-v2 (3.0.0)
+      jekyll (>= 3.0, < 5.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.0.0)
@@ -148,6 +150,7 @@ DEPENDENCIES
   alembic-jekyll-theme!
   jekyll-dotenv
   jekyll-notion
+  jekyll-paginate-v2
   jekyll-sass-converter
 
 BUNDLED WITH

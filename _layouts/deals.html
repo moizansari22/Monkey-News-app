@@ -5,9 +5,56 @@ layout: default
 
 
 
- 
+<div class="article-grid">
 
-    {% include post-list.html %}
+    {%- include aside.html -%}
+    
+    <div class="inner-grid">
+  <ul class="products">
+    
+
+    {% if paginator.posts.size > 0 %}
+  
+        {% for post in paginator.posts %}
+        {% if post.categories contains page.company or page.company  == blank %}
+        {%- include post-list.html -%}
+        {% endif %}
+        {% endfor %}
+
+
+        {% else %}
+  <p>No posts found.</p>
+{% endif %}
+        </ul>
+  
+     
+        {% if paginator.total_pages > 1 %}
+        <div class="pager">
+            
+            
+                <a href="{{ paginator.previous_page_path | relative_url }}" class="{% if paginator.previous_page %} nothing{% endif %}  previous">&larr; Previouse</a>
+            
+            <ol>
+            {% if paginator.page_trail %}
+    {% for trail in paginator.page_trail %}
+      <li >
+          <a {% if page.url == trail.path %}class="selected"{% endif %} href="/{{ trail.path  }}" title="{{trail.title}}">{{ trail.num }}</a>
+      </li>
+    {% endfor %}
+  {% endif %}
+</ol>
+            
+            
+              <a href="{{ paginator.next_page_path | relative_url }}" class="{% if paginator.previous_page %} nothing{% endif %}  next">Next &raquo;</a>
+            
+            
+          </div>
+        {% endif %}
+
+      </div>
+  
+  </div>
+  
 
 
   

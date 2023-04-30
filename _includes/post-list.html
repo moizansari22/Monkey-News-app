@@ -1,81 +1,8 @@
-<div class="article-grid">
-  <aside class="aside">
-    <div class="aside--inner">
-      <h1>Women</h1>
-    <ul>
-      <li> <a href="/"> Womens Shoes</a></li>
-      <li> <a href="/">Women Clothing</a></li>
-      <li> <a href="/">Women Accessories</a></li>
-      <li> <a href="/">Women Bags</a></li>
-      
-    </ul>
 
-    <h1>Mens</h1>
-
-    <ul>
-      <li> <a href="/"> Mens Shoes</a></li>
-      <li> <a href="/">Mens Clothing</a></li>
-      <li> <a href="/">Mens Accessories</a></li>
-      <li> <a href="/">Mens Bags</a></li>
-      
-    </ul>
-
-    <h1>Beauty</h1>
-
-    <ul>
-      <li> <a href="/">Skin Care</a></li>
-      <li> <a href="/">Make up</a></li>
-      <li> <a href="/">Bath Body</a></li>
-      <li> <a href="/">Mens Care</a></li>
-      <li> <a href="/">Fragrances</a></li>
-      
-    </ul>
-
-    <h1>Kids</h1>
-
-    <ul>
-      <li> <a href="/">Girls Clothing</a></li>
-      <li> <a href="/">Boys Clothing</a></li>
-    </ul>
-
-    </div>
-
-    <div class="aside--inner">
-      <h1>Brands</h1>
-    <ul>
-      <li> <a href="/">Zalora</a></li>
-      <li> <a href="/">Cottonon</a></li>
-      <li> <a href="/">Puma</a></li>
-      <li> <a href="/">hermo</a></li>
-      <li> <a href="/">jdsports</a></li>
-      <li> <a href="/">skechers</a></li>
-      <li> <a href="/">sephora</a></li>
-      <li> <a href="/">charles & kieth</a></li>
-      <li> <a href="/">addidas</a></li>
-      <li> <a href="/">under-armour</a></li>
-      
-    </ul>
-    </div>
-
-    <div class="aside--inner">
-      <h1>Discounts</h1>
-    <ul>
-      <li> <a href="/">30% above</a></li>
-      <li> <a href="/">40% above</a></li>
-      <li> <a href="/">50% above</a></li>
-      <li> <a href="/">60% above</a></li>
-      <li> <a href="/">70% above</a></li>
-      </ul>
-
-      </div>
-
-  </aside>
-  <div>
-  <ul class="products">
+ 
 {% if paginator.posts %}
 
 
-    
     {% assign random_posts = paginator.posts | sample %} 
     {% for page in paginator.posts %}
 
@@ -111,9 +38,9 @@
 
 
   {% assign mydata = site.data.mydata %} 
-  {% for item in mydata %} {% if item.brand == page.brand %}
-   
-    
+  {% for item in mydata %} 
+  
+  {% if item.brand == page.brand %}
 
     {% assign mylink = item.url | append: page.productlink %}
 
@@ -169,15 +96,22 @@
 
 </li>
 
+
 {% endif %}
+
 
 {% endfor %}
-{% endif %}
 
-</ul>
-{% include post-pagination.html %}
-</div>
-</div>
+{% endif %} 
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,141 @@
+menu:
+  
+    subfolderitems:
+      - page: sephora
+        name: sephora
+        category: ["beauty"]
+        mainCategory: ["men", "women",]
+      - page: zara
+        name: zara
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: under-armour
+        name: under-armour
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: hermo
+        name: hermo
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: shein
+        name: shein
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: mango
+        name: mango
+        category: ["clothing", "accessories", "shoes", "bags", ]
+        mainCategory: ["men", "women", "kids"]
+      - page: jdsports
+        name: jd sports
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: calvin-klein
+        name: calvin klein
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: michael-kors
+        name: michael kors
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: charles-keith
+        name: charles keith
+        category: clothing
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: bokita-lover
+        name: bokita lover
+        category: clothing
+        mainCategory: ["women"]
+      - page: cottonon
+        name: cotton
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: nike
+        name: nike
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: bath-and-body-works
+        name: bath & body works
+        category: ["beauty", "grooming"]        
+        mainCategory: ["men", "women"]
+      - page: the-body-shop
+        name: the body shop
+        category: ["beauty", "grooming"]        
+        mainCategory: ["men", "women"]
+      - page: surfdome
+        name: surfdome
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: puma
+        name: puma
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: padini
+        name: padini
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: adidas
+        name: adidas
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: levis
+        name: levis
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: asics
+        name: asics
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: zara
+        name: zara
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: zalora
+        name: zalora
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: triump
+        name: triump
+        category: ["clothing"]
+        mainCategory: ["women"]
+      - page: clarks
+        name: clarks
+        category: ["shoes"]
+        mainCategory: ["men", "women", "kids"]
+      - page: sports-direct
+        name: sports direct
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: vans
+        name: vans
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: mac-cosmetics
+        name: mac cosmetics
+        category: ["beauty",]
+        mainCategory: ["women"]
+      - page: forever21
+        name: forever21
+        category: ["clothing", "accessories", "shoes", "bags", "boys-fashion", "girls-fashion",  ]
+        mainCategory: ["men", "women", "kids"]
+      - page: nars-cosmetics
+        name: nars cosmetics
+        category: ["beauty",]
+        mainCategory: ["women"]
+      - page: the-face-shop
+        name: the face shop
+        category: ["beauty", "grooming"]
+        mainCategory: ["women", "men"]
+      - page: shins
+        name: shins
+        category: ["beauty", "grooming"]
+        mainCategory: ["men", "women", "kids"]
+      - page: sasa
+        name: sasa
+        category: ["beauty", "grooming"]
+        mainCategory: ["men", "women",]
+        
+
+
+
+
