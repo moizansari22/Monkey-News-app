@@ -1,7 +1,8 @@
 <aside class="aside">
     <div class="aside--inner">
       <h1>Top Deals</h1>
-    <ul>
+    
+      <ul class="small-card--wrapper">
       {% for post in site.posts  limit:3 %}
 
       {% assign priceBefore = post.before | times: 1.0  | round: 2 %}
