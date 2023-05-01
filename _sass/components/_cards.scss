@@ -252,13 +252,7 @@ PRODUCR STYLES
     
   }
   
-.small-card--wrapper{
-  width: 100%;
 
-  ul li{
-    width: 100%;
-  }
-}
 
   .small-card{
     display: flex;
@@ -267,6 +261,11 @@ PRODUCR STYLES
     padding: 8px !important;
     margin-bottom: 16px;
     border: 1px solid #eaeaea;
+
+    &--wrapper li{
+        width: 100%;
+        
+      }
 
     &__img{
       width: 100px;

@@ -29,7 +29,7 @@ layout: default
     {% assign priceBefore = page.before | times: 1.0  | round: 2 %}
     {% assign priceAfter = page.after | times: 1.0  | round: 2%}
     {% assign priceDifference = priceBefore | minus: priceAfter   %}
-    {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
+    {% assign priceDifferenceFloat = priceDifference | times: 1.0  | round: 3  %}
     {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
 
 
