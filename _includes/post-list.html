@@ -43,16 +43,15 @@
               {% endif %}
             {% endfor %}
 
-  <div class="gotoproduct">
-    <a href="{{item.url | append: page.productlink}}" target="_blank">go to product</a>
-  </div>
+
   
   </div>
    
 
 <div class="product__details"> 
     <p class="product__category">{{ page.brand }}</p>
-    <p class="product__title">{{ page.title }}</p>
+    <a href="{{item.url | append: page.productlink}}" class="product__title">{{ page.title }}</a>
+    
     <div class="offset">
       <span itemprop="priceCurrency" content="RM">RM</span>
       <span itemprop="price" content="">{{ page.before }}</span>

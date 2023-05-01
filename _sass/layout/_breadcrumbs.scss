@@ -6,28 +6,37 @@ BREADCRUMB LIST
 .breadcrumbs {
     position: relative;
     display: flex;
-    padding: 15px 0;
+    padding: 16px 16px 4px 16px;
     font-size: 14px;
-    &__item {
-        padding: 0 24px 0 0px;
+    margin: 0 auto;
+    max-width: 1460px;
+    a {
+        
         position: relative;
-        margin-right: 16px;
-        a {
-            color: #878787;
+        font-size: 13px;
+        line-height: 16px;
+        color: #878787;
+        
+        &:first-child{
+            &:before{
+                display: none;
+            }
         }
-        &::after {
-            position: absolute;
-            content: '\E315';
-            font-family: "Material Icons";
-            width: 10px;
+
+        &:before{
+            display: inline-block;
+            position: relative;
+            top: -1px;
+            vertical-align: middle;
+            content: "";
+            margin: 0 8px;
+            width: 7px;
             height: 10px;
-            font-size: 18px;
-            right: 0;
-            top: -2px;
-            color: #878787;
+            line-height: 0;
+            font-size: 0;
+            background: url(data:image/svg+xml;utf8;base64,IDxzdmcgdmlld0JveD0iMCAwIDcgMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTkyLjAwMDAwMCwgLTE2Ni4wMDAwMDApIj48ZyBpZD0iaWNvbi9hcnJvdy1yaWdodC9ibGFjayIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTMuMDAwMDAwLCAxNjYuMDAwMDAwKSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMC41Ij48cG9seWxpbmUgcG9pbnRzPSIwLjAzMjA5NzQ0ODggMCA1IDQuOTgzODk5NiAwIDEwIj48L3BvbHlsaW5lPjwvZz48L2c+PC9zdmc+) no-repeat 0 0;
         }
+      
     }
-    &__item::first-child {
-        padding-left: 0;
-    }
+ 
 }

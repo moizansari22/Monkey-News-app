@@ -100,12 +100,20 @@
     
 </header>
 
-<div class="common-header">
+<div class="breadcrumbs">
 
-<div>
- <h3>Eliquid</h3>
- <p>Our online eliquids vape juice range is second to none in the UK. Why? We have the wide range of e-liquids from leading vape juice brands, including Six Licks, Wild Roots, Dinner Lady & Ohm Brew. No matter which vape Eliquid flavours you’re searching for, we’ve got them. Browse below for everything from Nic salts to Shortfills, fruity flavours to cool menthols</p>
-</div>
+  {% if page.url != "/" %}
+
+  <a href="/">Home</a>  {% assign parts = page.url | remove: "index.html" | remove: ".html" | split: "/" %}
+  {% for part in parts %}
+    {% unless forloop.last %}
+      <a href="{{ part | prepend: " " }}">{{ part | capitalize }}</a> 
+    {% else %}
+      
+      <a href="#">{{ part | capitalize }} {{page.title}}</a> 
+    {% endunless %}
+  {% endfor %}
+{% endif %}
 
 </div>
 

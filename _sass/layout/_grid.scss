@@ -35,9 +35,20 @@
         padding: 0.25rem 0.5rem;
         color: #0090e3;
         font-weight: 400;
+      
       }
     }
   }
+}
+
+.asidelinks__item{
+  height: 58px !important;
+  width: 58px !important;
+  text-indent: -1000px;
+  border-radius: 50vh !important;
+  overflow: hidden;
+  padding: 0 !important;
+  border: 1px solid #e8e8e8;
 }
 
 .post-header{
