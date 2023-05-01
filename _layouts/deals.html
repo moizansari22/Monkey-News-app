@@ -21,7 +21,16 @@ layout: default
     {% assign random_posts = paginator.posts | sample %} 
     {% for page in paginator.posts %}
 
-    {% assign mydata = site.data.mydata %}
+    
+
+    {% for item in site.data.brands %}
+    {% if page.brand contains item.brand %} 
+      {% assign mylink = item.url | append: page.productlink %}
+    {% endif %}
+    {% endfor %}
+    
+
+
     {% assign post_date = post.date %}
     {% assign current_date = 'now' %}
     {% assign age = current_date | date: "%s" | minus: post_date | date: "%j" | minus: 1 %}

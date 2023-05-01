@@ -44,6 +44,12 @@
       <ul class="small-card--wrapper">
       {% for post in site.posts  limit:3 %}
 
+      {% for item in site.data.brands %}
+      {% if post.brand contains item.brand %} 
+        {% assign mylink = item.url | append: post.productlink %}
+      {% endif %}
+      {% endfor %}
+
       {% assign priceBefore = post.before | times: 1.0  | round: 2 %}
     {% assign priceAfter = post.after | times: 1.0  | round: 2%}
     {% assign priceDifference = priceBefore | minus: priceAfter   %}
@@ -57,7 +63,7 @@
       {% endif %}
 
     {% if discountPercentage > 49 %}
-      <li> <a class="small-card" href="/"> 
+      <li> <a href="{{mylink}}" class="small-card" href="/"> 
 
         {% assign foundImage = 0 %}
         {% assign images = post.content | split:"<img " %}
@@ -85,7 +91,9 @@
         
      
         <!-- and page.mainCategory contains post.gender  -->
-      </a></li>
+      </a>
+    
+    </li>
 
       {% endif %}
       {% endfor %}

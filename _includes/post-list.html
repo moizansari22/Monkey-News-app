@@ -15,15 +15,7 @@
   </div>
 
 
-  {% assign mydata = site.data.mydata %} 
-  {% for item in mydata %} 
-  
-  {% if item.brand == page.brand %}
 
-    {% assign mylink = item.url | append: page.productlink %}
-
-    {% endif %} 
-    {% endfor %}
 
 
 
@@ -50,7 +42,7 @@
 
 <div class="product__details"> 
     <p class="product__category">{{ page.brand }}</p>
-    <a href="{{item.url | append: page.productlink}}" class="product__title">{{ page.title }}</a>
+    <a href="{{mylink}}" class="product__title">{{ page.title }}</a>
     
     <div class="offset">
       <span itemprop="priceCurrency" content="RM">RM</span>
