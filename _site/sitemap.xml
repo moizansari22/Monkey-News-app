@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/women/clothing/hermo/oversized-message-t-shirt-teenage-girl-mango-teen-malaysia.html</loc>
-<lastmod>2022-12-14T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/men/shoes/zara/printed-silk-dress-with-ruffles.html</loc>
+<lastmod>2023-04-24T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/women/clothing/hermo/printed-cotton-blend-t-shirt-teenage-girl-mango-teen-malaysia.html</loc>
-<lastmod>2022-12-14T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/men/shoes/zara/calia-woven-knit-frill-sleeve-top.html</loc>
+<lastmod>2023-04-16T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/women/clothing/hermo/frayed-hem-denim-shorts-teenage-girl-mango-teen-malaysia.html</loc>
-<lastmod>2022-12-14T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/men/shoes/zara/color-block-family-matching-crewneck-long-sleeve-sweatshirts-only-rm-72-patpat-asia.html</loc>
+<lastmod>2023-04-16T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/men/shoes/zara/lovebonito.html</loc>
+<lastmod>2023-04-15T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/men/shoes/zara/drmister.html</loc>
+<lastmod>2023-04-15T00:00:00+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/categories/</loc>
