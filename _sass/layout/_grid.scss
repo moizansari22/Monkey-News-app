@@ -10,13 +10,15 @@
     padding-top: 1em;
 
     h1 {
-      font-size: 0.9375rem;
-      padding: 0.625rem 0;
+      font-size: 18px;
+    padding: 8px 0 16px 0;      
     }
+
     ul {
       display: flex;
       flex-flow: row wrap;
       gap: 0.325rem 0.625rem;
+      width: 100%;
 
       li a {
         align-items: center;
@@ -27,7 +29,7 @@
         width: 100%;
         background: #e8e8e8;
         border-color: #e8e8e8;
-        border-radius: 0.2rem;
+        border-radius: 10px;
         font-size: 0.875rem;
         line-height: 1.5;
         padding: 0.25rem 0.5rem;

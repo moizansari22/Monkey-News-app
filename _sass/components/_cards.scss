@@ -258,13 +258,13 @@ PRODUCR STYLES
     display: flex;
     background-color: transparent !important;
     align-items: flex-start !important;
-    padding: 4px !important;
+    padding: 8px !important;
     margin-bottom: 16px;
     border: 1px solid #eaeaea;
 
     &__img{
-      width: 11.25em;
-    height: 7.25em;
+      width: 100px;
+    height: 110px;
     background-color: #ccc;
     object-fit: cover;
     margin-right: 0.5em ;
@@ -315,7 +315,7 @@ PRODUCR STYLES
 
       .article-grid {
 
-        grid-template-columns: 300px minmax(0,1fr);
+        grid-template-columns: 320px minmax(0,1fr);
     
         .aside{
           display: block;

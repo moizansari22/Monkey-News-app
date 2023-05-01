@@ -2,13 +2,13 @@
     <div class="aside--inner">
       <h1>Top Deals</h1>
     <ul>
-      {% for post in site.posts  limit:4 %}
+      {% for post in site.posts  limit:3 %}
 
       {% assign priceBefore = post.before | times: 1.0  | round: 2 %}
     {% assign priceAfter = post.after | times: 1.0  | round: 2%}
     {% assign priceDifference = priceBefore | minus: priceAfter   %}
     {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
-    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore | times: 100 | round: 2  %}
+    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore | times: 100 | round: 3  %}
 
     {% assign first_image = post.content | split: '<img ' | last | split: '>' | first %}
     {% if first_image contains 'src=' %}

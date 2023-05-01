@@ -117,13 +117,20 @@
       }
     }
 
-    &__logo {
-      margin-bottom: 10px;
-      margin: auto 0;
-      font-weight: 800;
-      color: #000;
-      display: flex;
-      align-items: center;
+    // &__logo {
+    //   margin-bottom: 10px;
+    //   margin: auto 0;
+    //   font-weight: 800;
+    //   color: #000;
+    //   display: flex;
+    //   align-items: center;
+      
+    // }
+
+    .long-logo{
+      display: block;
+      max-width: 148px;
+      margin-bottom: -5px;
     }
 
 
@@ -197,11 +204,7 @@
         }
       }
     }
-    .long-logo{
-      display: block;
-      max-width: 148px;
-      margin-bottom: -5px;
-    }
+
 
   }
 
@@ -306,15 +309,10 @@
   align-self: center;
   flex: 1;
   margin-left: 6px;
-  margin-right: 12px;
-    
-    line-height: 4rem;
-    padding-right: 7.6rem;
+  
+  justify-content: flex-end;
     background-color: #fff;
-    
-    width: 556px;
-    border-radius: 6px;
-    padding: 0 4.2rem 0 1.2rem;
+
   
 
 .search{
