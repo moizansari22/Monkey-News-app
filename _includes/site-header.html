@@ -1,17 +1,11 @@
 <header class="header">
   
     <div class="nav-wrapper content-area">
+      <div class="top-header--outer">
       <div class="top-header">
 
         <ul class="top-header__left">
-          <li>
-            <a class="top-header__logo" href="{{ "./" | relative_url }}" alt="{{ site.title | escape }} LOGO HERE">
-                
-              <span class="long-logo">
-                <img src="/assets/logos/logo.svg"/>
-              </span>
-            </a>
-          </li>
+       
           <li><a {% if page.mainCategory == 'women' %} data-current="active" {% endif %} href="/women/">Women</a></li>
           <li><a {% if page.mainCategory == 'men' %} data-current="active" {% endif %} href="/men/">Men</a></li>
           <li><a {% if page.mainCategory == 'kids' %} data-current="active" {% endif %}  href="/kids/">Kids</a></li>
@@ -19,8 +13,15 @@
 
           <ul class="top-header__middle">
 
-            <li class="search-wrapper">
-             <div class="search"></div>
+       
+
+            <li>
+              <a class="top-header__logo" href="{{ "./" | relative_url }}" alt="{{ site.title | escape }} LOGO HERE">
+                  
+                <span class="long-logo">
+                  <img src="/assets/logos/wizideals.svg"/>
+                </span>
+              </a>
             </li>
 
             <!-- <li><a {% if page.mainCategory == 'kids' %} data-current="active" {% endif %}  href="/kids/">View As</a></li>
@@ -41,14 +42,15 @@
     
     
         </div>
+        </div>
         {% if page.mainCategory != blank %}
         <ul class="subnav">
-          <li>
+          <!-- <li>
           <a id="menu-icon">
             <div class="icon"><i class="gg-feed"></i></div>
              <span>brands {{page.company}}</span>
           </a>
-        </li>
+        </li> -->
 
         
 
@@ -96,14 +98,11 @@
 </header>
 
 <div class="common-header">
-  <ul>
-  
-</ul>
 
-<ul>
+<div>
  <h3>Eliquid</h3>
  <p>Our online eliquids vape juice range is second to none in the UK. Why? We have the wide range of e-liquids from leading vape juice brands, including Six Licks, Wild Roots, Dinner Lady & Ohm Brew. No matter which vape Eliquid flavours you’re searching for, we’ve got them. Browse below for everything from Nic salts to Shortfills, fruity flavours to cool menthols</p>
+</div>
 
-</ul>
 </div>
 

@@ -9,16 +9,15 @@
   justify-content: space-between;
   font-size: 16px;
   background-color: #fff;
-  margin: 12px 16px;
+  border-top: 1px solid #ebebeb;
 
-  ul{
-   
-    
-
-    li{
-      margin-right: 1.6rem;
-    }
+  div{
+    max-width: 1460px;
+    margin: auto;
+    padding: 0 16px;
   }
+
+
 
   .color--highlight{
     color: #f60;
@@ -44,17 +43,17 @@
     margin: 0 auto;
     
     ul{
+      gap: 35px;
       li {
-        font-size: 17px;
+        font-size: 16px;
         position: relative;
   
       
   
         a {
           display: block;
-          padding: 7px 6px 7px 6px;
-          margin: 0 6px;
-          font-size: 18px;
+          padding: 7px 0px;
+          font-size: 15px;
         }
       }
     }
@@ -67,26 +66,25 @@
     
    
   }
+
+
+  .top-header--outer{
+   
+    border-bottom: 1px solid #ebebeb;
+  }
     
   .top-header {
     text-align: center;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 1460px;
+    margin: auto;
     align-items: center;
     position: relative;
-    background-color: #0090e3;
-    // padding: 0 8px 0 8px;
-    height: 56px;
-    
+    height: 69px;
 
-    ul li a{
-      color: #fff;
-    }
 
-    &__icon {
-      padding: 10px;
-    }
 
     &__left {
       display: flex;
@@ -144,16 +142,13 @@
   padding: 10px;
 }
 
-.long-logo{
-  display: block;
-  max-width: 100px;
-}
+
 
 
 
 @media only screen and (min-width: 800px) {
   .header {
-    border-bottom: 1px solid #efefef;
+    
     .top-header {
       
       &__icon {
@@ -204,7 +199,7 @@
     }
     .long-logo{
       display: block;
-      max-width: 180px;
+      max-width: 148px;
       margin-bottom: -5px;
     }
 
@@ -259,6 +254,8 @@
 
 }
 
+
+
  ul.subnav{
   display: flex;
   padding-bottom: 8px;
@@ -266,9 +263,10 @@
   overflow-x: scroll;
   -ms-overflow-style: none; 
   scrollbar-width: none;  
-  background-color: #f2f7fc;
+  max-width: 1460px;
+  margin: auto;
   height: 56px;
-  padding: 0 16px !important;
+  padding: 0 16px;
 
   &::-webkit-scrollbar{
     display: none;
@@ -281,25 +279,23 @@
 
       font-size: 13px ;
       white-space: nowrap ;
-      background-color: rgb(244, 244, 244) ;
-      color: #0090e3;
-      font-weight: 500;
-      margin-right: 6px ;
-      padding:3px 8px ;
+      // color: #0090e3;
+      font-weight: 300;
+      padding:3px 0px;
       line-height: 44px;
 
     }
   }
 
   @media only screen and (min-width: 1100px) {
-    padding: 0 24px;
-    margin-top: 0px;
+    
+    
     li{
       a{
-        font-size: 16px !important;
-        background-color: transparent !important;
-        padding:7px 6px !important;
-        line-height: 36px;
+        // font-size: 16px !important;
+        // background-color: transparent !important;
+        // padding:7px 6px !important;
+        
       }
     }
   }
@@ -324,14 +320,8 @@
 .search{
   height: 42px;
   
-  background-color: #f6f6f6;
   width: 100%;
-  max-width: 400px;
-  
-  border-radius: 4px;
-  text-align: left;
-  align-items: center;
-  display: flex;
+
   font-size: 16px;
 
   input{
