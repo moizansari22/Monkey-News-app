@@ -47,7 +47,6 @@ PRODUCR STYLES
       border-radius: 10px;
       
       border: 1px solid transparent;
-      height: 100%;
       margin-bottom: 1em;
       
       &:hover{
@@ -55,9 +54,7 @@ PRODUCR STYLES
         cursor: pointer;
       }
 
-      &:active {
-        
-      }
+
 
       &__highlights{
         color: #666;
@@ -85,10 +82,7 @@ PRODUCR STYLES
   
   
   
-      .referrer {
-        font-size: 14px;
-        font-style: italic;
-      }
+
   
       &__details {
         padding: 4px 8px;
@@ -183,35 +177,7 @@ PRODUCR STYLES
     }
   }
   
-  .productpage {
-   
-  
-    &__descriptions {
-      padding-top: 32px;
-  
-      ul {
-        li {
-          padding-left: 1.5rem;
-          margin-bottom: 0.25rem;
-          line-height: 1.8em;
-          position: relative;
-  
-          &::before {
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            text-decoration: underline;
-            vertical-align: bottom;
-            content: "";
-            background-repeat: no-repeat;
-            background-size: 1.5em;
-          }
-        }
-      }
-    }
-  
-  
-  }
+
   
   
   
@@ -265,11 +231,8 @@ PRODUCR STYLES
     text-align: center;
     text-transform: uppercase;
     pointer-events: none;
-    // background: #f44343;
-    // color: #fff;
     font-size: 14px;
     line-height: 16px;
-    // padding: 1px 6px;
     z-index: 2;
     border-radius: 4px;
     font-weight: 600;
@@ -289,6 +252,36 @@ PRODUCR STYLES
     
   }
   
+
+
+  .small-card{
+    display: flex;
+    background-color: transparent !important;
+    align-items: flex-start !important;
+    padding: 4px !important;
+    margin-bottom: 16px;
+    border: 1px solid #eaeaea;
+
+    &__img{
+      width: 11.25em;
+    height: 7.25em;
+    background-color: #ccc;
+    object-fit: cover;
+    margin-right: 0.5em ;
+    border-radius: 8px;
+    }
+
+    p{
+      font-size: 14px;
+    line-height: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    margin-bottom: 4px;
+    }
+  }
   
   
  
@@ -345,16 +338,3 @@ PRODUCR STYLES
     }
     
   
-    .gotoproduct{
-      background: #fff;
-      width: 90%;
-      height: 45px;
-      position: absolute;
-      z-index: 99;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-      line-height: 45px;
-    }

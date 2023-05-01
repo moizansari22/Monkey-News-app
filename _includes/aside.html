@@ -2,20 +2,48 @@
     <div class="aside--inner">
       <h1>Top Deals</h1>
     <ul>
-      {% for post in site.posts  limit:10 %}
+      {% for post in site.posts  limit:4 %}
 
       {% assign priceBefore = post.before | times: 1.0  | round: 2 %}
     {% assign priceAfter = post.after | times: 1.0  | round: 2%}
     {% assign priceDifference = priceBefore | minus: priceAfter   %}
     {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
-    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore | times: 100  %}
+    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore | times: 100 | round: 2  %}
+
+    {% assign first_image = post.content | split: '<img ' | last | split: '>' | first %}
+    {% if first_image contains 'src=' %}
+      {% assign src_index = first_image | split: 'src=' | last | split: ' ' | first %}
+      {% assign src = src_index | remove: '"' %}
+      {% endif %}
 
     {% if discountPercentage > 49 %}
-      <li> <a href="/"> 
-        {{discountPercentage}}
-        {{post.category}}
-        {{page.mainCategory}}
-        {{post.Gender}}
+      <li> <a class="small-card" href="/"> 
+
+        {% assign foundImage = 0 %}
+        {% assign images = post.content | split:"<img " %}
+        {% for image in images %}
+          {% if image contains 'src' %}
+      
+              {% if foundImage == 0 %}
+                  {% assign html = image | split:"/>" | first %}
+                  <img class="small-card__img"  {{ html }} />
+                  {% assign foundImage = 1 %}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        
+
+        <div class="small-card__details">
+          <div>
+            <span>{{discountPercentage}} % OFF </span> 
+            <p>{{post.title}}</p>
+            <span>{{priceAfter}}</span>
+          </div>
+        </div>
+
+        
+     
         <!-- and page.mainCategory contains post.gender  -->
       </a></li>
 
