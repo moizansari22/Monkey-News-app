@@ -29,7 +29,7 @@
         {{item.brand}}
       {% endif %}
       {% endfor %}</title>
-    <meta name="description" content="from RM{{ priceBefore }} to  RM{{ priceAfter}} for {{ page.title }}">
+    <meta name="description" content="from {{ priceBefore }} to  {{ priceAfter}} for {{ page.title }}">
     <meta name="keywords" content=" {% for category in page.categories %}{{category}}, {% endfor %} ">
 
     {% if page.indexing == false %}
