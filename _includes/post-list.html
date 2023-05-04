@@ -29,7 +29,7 @@
           
                   {% if foundImage == 0 %}
                       {% assign html = image | split:"/>" | first %}
-                      <img {{ html }} />
+                      <img {{ html }} loading="lazy"  />
                       {% assign foundImage = 1 %}
                   {% endif %}
               {% endif %}
@@ -42,7 +42,7 @@
 
 <div class="product__details"> 
   
-    <a href="{{mylink}}" class="product__title">{{ page.title }}</a>
+    <a href="{{mylink}}" target="_blank" class="product__title">{{ page.title }}</a>
     
     <div class="offset">
       <span itemprop="priceCurrency" content="RM">RM</span>
