@@ -2,7 +2,7 @@
  
 
 
-{%if age <= 120 %}
+{%if age <= 520 %}
 
 <li class="product" itemprop="item" itemtype="http://schema.org/Product">
       
@@ -41,7 +41,7 @@
    
 
 <div class="product__details"> 
-    <p class="product__category">{{ page.brand }}</p>
+  
     <a href="{{mylink}}" class="product__title">{{ page.title }}</a>
     
     <div class="offset">
@@ -55,12 +55,12 @@
 {% endfor %}
 </div>
     <div class="price">
-       <div class="whole"> RM{{ page.after  }}  </div>
+       <div class="whole"> {{ page.after  }}  </div>
 
        <div class="price-wrapper">
-       <p class="price-before">RM{{ page.before}}</p> 
+       <p class="price-before">{{ page.before}}</p> 
        <span class="coupon-highlight">  
-        {{discountPercentage | times: 100  }}% OFF
+        {{discountPercentage | times: 100 | round 2  }}% OFF
        </span>
       </div>
     </div>

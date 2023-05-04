@@ -50,8 +50,11 @@
       {% endif %}
       {% endfor %}
 
-      {% assign priceBefore = post.before | times: 1.0  | round: 2 %}
-    {% assign priceAfter = post.after | times: 1.0  | round: 2%}
+      {% assign priceBefore = post.before | remove: "RM " | replace: ",", "" | times: 1.0  | round: 2 %}
+      {% assign priceAfter = post.after | remove: "RM " | replace: ",", "" | times: 1.0  | round: 2%} 
+  
+
+
     {% assign priceDifference = priceBefore | minus: priceAfter   %}
     {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
     {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore | times: 100 | round: 3  %}

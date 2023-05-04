@@ -1,16 +1,42 @@
 ---
 layout: post-header
 ---
-{% assign priceBefore = page.before | times: 1.0  %}
-{% assign priceAfter = page.after | times: 1.0 %}
+<!-- {% assign priceBefore = page.before | remove: "MYR " | replace: ".", "" | times: 1.0  | round: 2 %}
+{% assign priceAfter = page.after | remove: "MYR " | replace: ".", "" | times: 1.0  | round: 2%}  -->
+
+<!-- 
+{% assign priceString = page.after %}
+{% if priceString contains "RM" %}
+  {% assign priceString = priceString | replace: "RM ", "" | replace: ",", "" | replace: ".", "" %}
+{% elsif priceString contains "MYR" %}
+  {% assign priceString = priceString | replace: "MYR ", "" | replace: ",", "" | replace: ".", "" %}
+{% else %}
+  {% assign priceString = priceString | replace: ",", "" | replace: ".", "" %}
+{% endif %}
+{% assign priceAfter = priceString | times: 1.0 | round: 2 %}
+
+-->
+
+{% assign beforeString = page.before | replace: "RM", "" | replace: "RM ", "" | replace: "MYR ", ""  %}
+{% assign priceBefore = beforeString | times: 1.0 | round: 2 %}
+
+{% assign afterString = page.after | replace: "RM", "" | replace: "RM ", "" | replace: "MYR ", ""  %}
+{% assign priceAfter = afterString | times: 1.0 | round: 2 %}
+
+
+
+
+
+
 {% assign priceDifference = priceBefore | minus: priceAfter   %}
 {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
 {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
+
 <!-- {% assign mylink = sitem.url | append: page.productlink %} -->
 
 
 {% for item in site.data.brands %}
-{% if page.brand contains item.brand %} 
+{% if page.category contains item.brand %} 
   {% assign mylink = item.url | append: page.productlink %}
 {% endif %}
 {% endfor %}
@@ -26,7 +52,7 @@ layout: post-header
 
   
 
-    <h5 class="discount-amount">Buy {{page.title}} at {{discountPercentage | times: 100 | round }}% off </h5>
+    <!-- <h5 class="discount-amount">Buy {{page.title}} at {{discountPercentage | times: 100 | round }}% off </h5> -->
         
     <div class="logo-area">
       <div class="logo-item">

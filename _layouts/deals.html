@@ -21,10 +21,12 @@ layout: default
     {% assign random_posts = paginator.posts | sample %} 
     {% for page in paginator.posts %}
 
+
+ 
     
 
     {% for item in site.data.brands %}
-    {% if page.brand contains item.brand %} 
+    {% if page.categories contains item.brand %} 
       {% assign mylink = item.url | append: page.productlink %}
     {% endif %}
     {% endfor %}
@@ -35,11 +37,16 @@ layout: default
     {% assign current_date = 'now' %}
     {% assign age = current_date | date: "%s" | minus: post_date | date: "%j" | minus: 1 %}
 
-    {% assign priceBefore = page.before | times: 1.0  | round: 2 %}
-    {% assign priceAfter = page.after | times: 1.0  | round: 2%}
+    {% assign beforeString = page.before | replace: "RM", "" | replace: "RM ", "" | replace: "MYR ", ""  %}
+    {% assign priceBefore = beforeString | times: 1.0 | round: 2 %}
+    
+    {% assign afterString = page.after | replace: "RM", "" | replace: "RM ", "" | replace: "MYR ", ""  %}
+    {% assign priceAfter = afterString | times: 1.0 | round: 2 %}
+    
+    
     {% assign priceDifference = priceBefore | minus: priceAfter   %}
-    {% assign priceDifferenceFloat = priceDifference | times: 1.0  | round: 3  %}
-    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
+    {% assign priceDifferenceFloat = priceDifference | times: 1.0  | round: 2  %}
+    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  | round: 2 %}
 
 
     {% assign first_image = page.content | split: '<img ' | last | split: '>' | first %}

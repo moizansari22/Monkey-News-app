@@ -17,11 +17,9 @@
     {% assign page_image = page.image | default: "/assets/images/default-og-image.jpg" %}
     {% assign page_image_url = site_url | append: page_image %}
 
-    {% assign priceBefore = page.before | times: 1.0  %}
-    {% assign priceAfter = page.after | times: 1.0 %}
-    {% assign priceDifference = priceBefore | minus: priceAfter   %}
-    {% assign priceDifferenceFloat = priceDifference | times: 1.0   %}
-    {% assign discountPercentage = priceDifferenceFloat | divided_by: priceBefore  %}
+ 
+
+
 
     {% assign first_image = page.content | split: '<img ' | last | split: '>' | first %}
     {% if first_image contains 'src=' %}
@@ -36,13 +34,11 @@
         "@type": "Product",
         "url": "{{site.url}}{{page.url}}",
         "image": "{{src}}",
-        "name": "{{discountPercentage | times: 100 | round }}% off {{ page_title }}",
-        "description": "Price Before was RM{{ page.before }} and price is now  RM{{ page.after }} for {{ page_description }}",
+        
         "priceCurrency": "RM",
         "offers": {
           "@type": "AggregateOffer",
-          "highPrice": "{{page.before}}",
-          "lowPrice": "{{page.after}}",
+          
         }
       }
       
@@ -50,9 +46,7 @@
     
     <!-- Facebook Open Graph -->
     <meta property="og:type" content="{{ page_type }}" />
-    <meta property="og:title" content="{{discountPercentage | times: 100 | round }}% off {{ page_title }}" />
-    <meta property="og:description" content=" Price Before was RM{{ page.before }} and price is now  RM{{ page.after }} for {{ page_description }}" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    
     
 
 
@@ -66,7 +60,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{discountPercentage | times: 100 | round }}% off {{ page_title }}" />
-    <meta name="twitter:description" content=" Price Before was RM{{ page.before }} and price is now  RM{{ page.after }} for {{ page_description }}" />
+    <!-- <meta name="twitter:description" content=" Price Before was RM{{ page.before }} and price is now  RM{{ page.after }} for {{ page_description }}" /> -->
     <meta name="twitter:image" content="{{ src }}" />
     <meta name="twitter:site" content="{{ site.twitter_username }}" />
     <meta name="twitter:creator" content="{{ page.author | default: site.author }}" />
