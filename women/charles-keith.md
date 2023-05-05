@@ -6,7 +6,7 @@ company: charles-keith
 category: all
 pagination:
   enabled: true
-  category: women, charles-keith,
+  category: women, charles&keith,
 ---
 
 
