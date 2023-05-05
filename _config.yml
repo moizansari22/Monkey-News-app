@@ -37,12 +37,12 @@ plugins:
 - jekyll-dotenv
 - jekyll-notion
 
-notion:
-  fetch_on_watch: true
-  databases:
-    - id: a70e6d4a7f03492c93f3846c73f24700
-      collection: posts
-      filter: { "property": "Published", "checkbox": { "equals": true } }
+# notion:
+#   fetch_on_watch: true
+#   databases:
+#     - id: a70e6d4a7f03492c93f3846c73f24700
+#       collection: posts
+#       filter: { "property": "Published", "checkbox": { "equals": true } }
 
 # 3. Gem settings
 # Pagination Setting
